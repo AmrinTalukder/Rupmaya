@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রূপমায়া | Ladies & Kids Collection</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#fff9fc;
+  color:#35212c;
+}
+header{
+  background:#42162f;
+  color:white;
+  text-align:center;
+  padding:24px 10px;
+}
+header h1{margin:0;font-size:34px}
+header p{margin:8px 0 0}
+nav{
+  background:#f2e0e9;
+  padding:13px 5px;
+  text-align:center;
+}
+nav a{
+  color:#42162f;
+  text-decoration:none;
+  margin:0 8px;
+  font-weight:bold;
+  font-size:14px;
+}
+.hero{
+  text-align:center;
+  padding:32px 15px;
+  background:#f8e9f0;
+}
+.hero h2{color:#42162f}
+.hero p{line-height:1.8}
+h2.section-title{
+  text-align:center;
+  color:#42162f;
+  margin:30px 0 20px;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  padding:0 12px 25px;
+  max-width:900px;
+  margin:auto;
+}
+.card{
+  background:white;
+  border:1px solid #ead5e0;
+  border-radius:12px;
+  overflow:hidden;
+  text-align:center;
+  padding-bottom:14px;
+}
+.card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
+}
+.card h3{font-size:17px;margin:12px 4px 6px}
+.price{
+  color:#a02d65;
+  font-weight:bold;
+  font-size:18px;
+  margin:8px 0 12px;
+}
+.order{
+  display:inline-block;
+  background:#16864b;
+  color:white;
+  padding:10px 12px;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:13px;
+  font-weight:bold;
+}
+.contact{
+  background:#f2e0e9;
+  text-align:center;
+  padding:25px 12px;
+  line-height:1.9;
+}
+footer{
+  background:#42162f;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+  line-height:1.8;
+}
+@media(min-width:650px){
+  .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .card img{height:260px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>রূপমায়া</h1>
+  <p>Rupmaya Ladies &amp; Kid's Collection</p>
+</header>
+
+<nav>
+  <a href="#home">হোম</a>
+  <a href="#products">কালেকশন</a>
+  <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>স্বাগতম রূপমায়ায় 🤍</h2>
+  <p>
+    যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
+    আপনার পছন্দের পোশাক বেছে নিন।
+  </p>
+  <a class="order" href="#products">কালেকশন দেখুন</a>
+</section>
+
+<h2 class="section-title" id="products">আমাদের কালেকশন</h2>
+
+<div class="products">
+
+  <div class="card">
+    <img src="https://placehold.co/600x750/f2e0e9/42162f?text=Borka"
+         alt="বোরকার নমুনা ছবি">
+    <h3>প্রিমিয়াম বোরকা</h3>
+    <p>কোড: RM001</p>
+    <p class="price">৳ ১,২৫০</p>
+    <a class="order" href="#" onclick="orderNow('প্রিমিয়াম বোরকা','RM001',1250);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+  <div class="card">
+    <img src="https://placehold.co/600x750/f6e8dc/42162f?text=Saree"
+         alt="শাড়ির নমুনা ছবি">
+    <h3>সুন্দর শাড়ি</h3>
+    <p>কোড: RM002</p>
+    <p class="price">৳ ১,৫০০</p>
+    <a class="order" href="#" onclick="orderNow('সুন্দর শাড়ি','RM002',1500);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+  <div class="card">
+    <img src="https://ibb.co.com/kgGR2n44"
+      <img src="https://ibb.co.com/99Df9WRF"
+<img src=https://ibb.co.com/6cQphtCz"
+         alt="থ্রি-পিসের নমুনা ছবি">
+    <h3>ডিজাইনার থ্রি-পিস</h3>
+    <p>কোড: RM003</p>
+    <p class="price">৳ ১,১০০</p>
+    <a class="order" href="#" onclick="orderNow('ডিজাইনার থ্রি-পিস','RM003',1100);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+  <div class="card">
+    <img src="https://placehold.co/600x750/eee2f4/42162f?text=Kurti"
+         alt="কুর্তির নমুনা ছবি">
+    <h3>স্টাইলিশ কুর্তি</h3>
+    <p>কোড: RM004</p>
+    <p class="price">৳ ৭৫০</p>
+    <a class="order" href="#" onclick="orderNow('স্টাইলিশ কুর্তি','RM004',750);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+  <div class="card">
+    <img src="https://placehold.co/600x750/f6e4e7/42162f?text=Tops"
+         alt="টপসের নমুনা ছবি">
+    <h3>লেডিস টপস</h3>
+    <p>কোড: RM005</p>
+    <p class="price">৳ ৫৫০</p>
+    <a class="order" href="#" onclick="orderNow('লেডিস টপস','RM005',550);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+  <div class="card">
+    <img src="https://ibb.co.com/HLv3HG0x"
+<img src=https://ibb.co.com/S7x60z6Q"
+<img src=https://ibb.co.com/R47wKYFD"
+<img src=https://ibb.co.com/B2PCt4RZ"
+<img src=https://ibb.co.com/8LczThSZ"
+<img src=https://ibb.co.com/dhzkfFC"
+         alt="বাচ্চাদের পোশাকের নমুনা ছবি">
+    <h3>বাচ্চাদের পোশাক</h3>
+    <p>কোড: RM006</p>
+    <p class="price">৳ ৬৫০</p>
+    <a class="order" href="#" onclick="orderNow('বাচ্চাদের পোশাক','RM006',650);return false;">WhatsApp-এ অর্ডার</a>
+  </div>
+
+</div>
+
+<section class="contact" id="contact">
+  <h2>অর্ডার ও যোগাযোগ</h2>
+  <p>📍 বগুড়া, বাংলাদেশ</p>
+  <p>📞 01343953665</p>
+  <a class="order" href="https://wa.me/8801343953665">
+    WhatsApp-এ যোগাযোগ করুন
+  </a>
+  <p>
+    <a href="https://www.facebook.com/rupmaya.bd.collection/">
+      Facebook Page
+    </a>
+    |
+    <a href="https://www.instagram.com/rupmaya.bd.collection/">
+      Instagram
+    </a>
+  </p>
+</section>
+
+<footer>
+  <strong>রূপমায়া</strong><br>
+  যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
+  © 2026 Rupmaya Ladies &amp; Kid's Collection
+</footer>
+
+<script>
+function orderNow(name, code, price) {
+  const phone = "8801343953665";
+  const message =
+    "আসসালামু আলাইকুম, রূপমায়া।\n" +
+    "আমি একটি পণ্য অর্ডার করতে চাই।\n" +
+    "পণ্যের নাম: " + name + "\n" +
+    "পণ্যের কোড: " + code + "\n" +
+    "দাম: " + price + " টাকা\n" +
+    "আমার নাম:\n" +
+    "ঠিকানা:\n" +
+    "মোবাইল নম্বর:";
+  window.open(
+    "https://wa.me/" + phone + "?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>

@@ -1,134 +1,265 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>রূপমায়া | Ladies & Kids Collection</title>
+
 <style>
-  header .logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    display: block;
-    margin: 2px auto;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff9fc;
+  color: #49313b;
+}
+
+/* ===== HEADER BANNER ===== */
+
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fce5ed;
+  overflow: hidden;
+}
+
+header .banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+  background: #f7dce7;
+  padding: 14px 8px;
+  text-align: center;
+  border-bottom: 2px solid #d9b36c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #842b50;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #bd8b37;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+  text-align: center;
+  padding: 40px 15px;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #fff8e9,
+    #fce5ed
+  );
+}
+
+.hero h2 {
+  color: #8c3156;
+  font-size: 27px;
+}
+
+.hero p {
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+/* ===== SECTION TITLE ===== */
+
+.section-title {
+  text-align: center;
+  color: #8c3156;
+  margin: 35px 0 22px;
+  font-size: 25px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  background: #d6ad60;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* ===== PRODUCT GRID ===== */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0 12px 35px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #efd6df;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(100, 40, 65, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  font-size: 17px;
+  margin: 13px 4px 7px;
+  color: #692744;
+}
+
+.card p {
+  margin: 7px 0;
+  font-size: 14px;
+}
+
+.price {
+  color: #a02d65;
+  font-weight: bold;
+  font-size: 19px !important;
+  margin: 10px 0 14px !important;
+}
+
+/* ===== BUTTONS ===== */
+
+.order {
+  display: inline-block;
+  background: #a02d65;
+  color: white;
+  padding: 11px 15px;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #d6ad60;
+  cursor: pointer;
+}
+
+.order:hover {
+  background: #7d2049;
+}
+
+/* ===== CONTACT ===== */
+
+.contact {
+  background: linear-gradient(
+    135deg,
+    #f9e1eb,
+    #fff3e0
+  );
+  text-align: center;
+  padding: 30px 12px;
+  line-height: 2;
+  border-top: 2px solid #d6ad60;
+}
+
+.contact h2 {
+  color: #842b50;
+}
+
+.contact a:not(.order) {
+  color: #842b50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #762342;
+  color: white;
+  text-align: center;
+  padding: 22px 10px;
+  line-height: 1.9;
+  border-top: 3px solid #d6ad60;
+}
+
+/* ===== DESKTOP ===== */
+
+@media (min-width: 650px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
   }
 
-</style>
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#fff9fc;
-  color:#35212c;
+  .card img {
+    height: 260px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
 }
-header{
-  background:#42162f;
-  color:white;
-  text-align:center;
-  padding:24px 10px;
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 400px) {
+  nav a {
+    margin: 0 6px;
+    font-size: 12px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+  }
+
+  .order {
+    padding: 9px 8px;
+    font-size: 11px;
+  }
 }
-header h1{margin:0;font-size:34px}
-header p{margin:8px 0 0}
-nav{
-  background:#f2e0e9;
-  padding:13px 5px;
-  text-align:center;
-  header .logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-  margin: 10px auto;
-}
-}
-nav a{
-  color:#42162f;
-  text-decoration:none;
-  margin:0 8px;
-  font-weight:bold;
-  font-size:14px;
-}
-.hero{
-  text-align:center;
-  padding:32px 15px;
-  background:#f8e9f0;
-}
-.hero h2{color:#42162f}
-.hero p{line-height:1.8}
-h2.section-title{
-  text-align:center;
-  color:#42162f;
-  margin:30px 0 20px;
-}
-.products{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
-  padding:0 12px 25px;
-  max-width:900px;
-  margin:auto;
-}
-.card{
-  background:white;
-  border:1px solid #ead5e0;
-  border-radius:12px;
-  overflow:hidden;
-  text-align:center;
-  padding-bottom:14px;
-}
-.card img{
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  display:block;
-}
-.card h3{font-size:17px;margin:12px 4px 6px}
-.price{
-  color:#a02d65;
-  font-weight:bold;
-  font-size:18px;
-  margin:8px 0 12px;
-}
-.order{
-  display:inline-block;
-  background:#16864b;
-  color:white;
-  padding:10px 12px;
-  text-decoration:none;
-  border-radius:6px;
-  font-size:13px;
-  font-weight:bold;
-}
-.contact{
-  background:#f2e0e9;
-  text-align:center;
-  padding:25px 12px;
-  line-height:1.9;
-}
-footer{
-  background:#42162f;
-  color:white;
-  text-align:center;
-  padding:20px 10px;
-  line-height:1.8;
-}
-@media(min-width:650px){
-  .products{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .card img{height:260px}
-}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>রূপমায়া</h1>
-<img src="file_000000007bec8230890071bf7421e6e0.png"
-     alt="রূপমায়া লোগো" class="logo">
+<!-- ===== HEADER BANNER ===== -->
 
-  <p>Rupmaya Ladies &amp; Kid's Collection</p>
+<header>
+  <img
+    src="rupmaya-banner.png"
+    alt="রূপমায়া Ladies & Kids Collection"
+    class="banner">
 </header>
+
+<!-- ===== NAVIGATION ===== -->
 
 <nav>
   <a href="#home">হোম</a>
@@ -136,102 +267,183 @@ footer{
   <a href="#contact">যোগাযোগ</a>
 </nav>
 
+<!-- ===== HERO ===== -->
+
 <section class="hero" id="home">
+
   <h2>স্বাগতম রূপমায়ায় 🤍</h2>
+
   <p>
     যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
     আপনার পছন্দের পোশাক বেছে নিন।
   </p>
-  <a class="order" href="#products">কালেকশন দেখুন</a>
+
+  <a class="order" href="#products">
+    আমাদের কালেকশন দেখুন
+  </a>
+
 </section>
 
-<h2 class="section-title" id="products">আমাদের কালেকশন</h2>
+<!-- ===== PRODUCTS ===== -->
+
+<h2 class="section-title" id="products">
+  আমাদের কালেকশন
+</h2>
 
 <div class="products">
 
+  <!-- Product 1 -->
+
   <div class="card">
-    <img src="https://placehold.co/600x750/f2e0e9/42162f?text=Borka"
-         alt="বোরকার নমুনা ছবি">
+    <img
+      src="https://placehold.co/600x750/f2e0e9/42162f?text=Borka"
+      alt="প্রিমিয়াম বোরকা">
+
     <h3>প্রিমিয়াম বোরকা</h3>
     <p>কোড: RM001</p>
     <p class="price">৳ ১,২৫০</p>
-    <a class="order" href="#" onclick="orderNow('প্রিমিয়াম বোরকা','RM001',1250);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('প্রিমিয়াম বোরকা','RM001',1250);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
+  <!-- Product 2 -->
+
   <div class="card">
-    <img src="https://placehold.co/600x750/f6e8dc/42162f?text=Saree"
-         alt="শাড়ির নমুনা ছবি">
+    <img
+      src="https://placehold.co/600x750/f6e8dc/42162f?text=Saree"
+      alt="সুন্দর শাড়ি">
+
     <h3>সুন্দর শাড়ি</h3>
     <p>কোড: RM002</p>
     <p class="price">৳ ১,৫০০</p>
-    <a class="order" href="#" onclick="orderNow('সুন্দর শাড়ি','RM002',1500);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('সুন্দর শাড়ি','RM002',1500);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
+  <!-- Product 3 -->
+
   <div class="card">
-    <img src="https://ibb.co.com/kgGR2n44"
-         alt="থ্রি-পিসের নমুনা ছবি">
+    <img
+      src="https://ibb.co.com/kgGR2n44"
+      alt="ডিজাইনার থ্রি-পিস">
+
     <h3>ডিজাইনার থ্রি-পিস</h3>
     <p>কোড: RM003</p>
     <p class="price">৳ ১,১০০</p>
-    <a class="order" href="#" onclick="orderNow('ডিজাইনার থ্রি-পিস','RM003',1100);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('ডিজাইনার থ্রি-পিস','RM003',1100);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
+  <!-- Product 4 -->
+
   <div class="card">
-    <img src="https://placehold.co/600x750/eee2f4/42162f?text=Kurti"
-         alt="কুর্তির নমুনা ছবি">
+    <img
+      src="https://placehold.co/600x750/eee2f4/42162f?text=Kurti"
+      alt="স্টাইলিশ কুর্তি">
+
     <h3>স্টাইলিশ কুর্তি</h3>
     <p>কোড: RM004</p>
     <p class="price">৳ ৭৫০</p>
-    <a class="order" href="#" onclick="orderNow('স্টাইলিশ কুর্তি','RM004',750);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('স্টাইলিশ কুর্তি','RM004',750);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
+  <!-- Product 5 -->
+
   <div class="card">
-    <img src="https://placehold.co/600x750/f6e4e7/42162f?text=Tops"
-         alt="টপসের নমুনা ছবি">
+    <img
+      src="https://placehold.co/600x750/f6e4e7/42162f?text=Tops"
+      alt="লেডিস টপস">
+
     <h3>লেডিস টপস</h3>
     <p>কোড: RM005</p>
     <p class="price">৳ ৫৫০</p>
-    <a class="order" href="#" onclick="orderNow('লেডিস টপস','RM005',550);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('লেডিস টপস','RM005',550);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
+  <!-- Product 6 -->
+
   <div class="card">
-    <img src="https://ibb.co.com/HLv3HG0x"
-         alt="বাচ্চাদের পোশাকের নমুনা ছবি">
+    <img
+      src="https://ibb.co.com/HLv3HG0x"
+      alt="বাচ্চাদের পোশাক">
+
     <h3>বাচ্চাদের পোশাক</h3>
     <p>কোড: RM006</p>
     <p class="price">৳ ৬৫০</p>
-    <a class="order" href="#" onclick="orderNow('বাচ্চাদের পোশাক','RM006',650);return false;">WhatsApp-এ অর্ডার</a>
+
+    <a class="order" href="#"
+      onclick="orderNow('বাচ্চাদের পোশাক','RM006',650);return false;">
+      WhatsApp-এ অর্ডার
+    </a>
   </div>
 
 </div>
 
+<!-- ===== CONTACT ===== -->
+
 <section class="contact" id="contact">
+
   <h2>অর্ডার ও যোগাযোগ</h2>
+
   <p>📍 বগুড়া, বাংলাদেশ</p>
+
   <p>📞 01343953665</p>
+
   <a class="order" href="https://wa.me/8801343953665">
     WhatsApp-এ যোগাযোগ করুন
   </a>
+
   <p>
     <a href="https://www.facebook.com/rupmaya.bd.collection/">
       Facebook Page
     </a>
+
     |
+
     <a href="https://www.instagram.com/rupmaya.bd.collection/">
       Instagram
     </a>
   </p>
+
 </section>
 
+<!-- ===== FOOTER ===== -->
+
 <footer>
+
   <strong>রূপমায়া</strong><br>
+
   যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
+
   © 2026 Rupmaya Ladies &amp; Kid's Collection
+
 </footer>
 
+<!-- ===== WHATSAPP ORDER SYSTEM ===== -->
+
 <script>
+
 function orderNow(name, code, price) {
+
   const phone = "8801343953665";
+
   const message =
     "আসসালামু আলাইকুম, রূপমায়া।\n" +
     "আমি একটি পণ্য অর্ডার করতে চাই।\n" +
@@ -241,12 +453,15 @@ function orderNow(name, code, price) {
     "আমার নাম:\n" +
     "ঠিকানা:\n" +
     "মোবাইল নম্বর:";
-  window.open(
-    "https://wa.me/" + phone + "?text=" +
-    encodeURIComponent(message),
-    "_blank"
-  );
+
+  const url =
+    "https://wa.me/" + phone +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
 }
+
 </script>
 
 </body>

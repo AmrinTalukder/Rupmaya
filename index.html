@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -16,9 +17,7 @@ body{
   color:#49313b;
 }
 
-/* =====================================
-   HEADER
-===================================== */
+/* HEADER */
 
 header{
   width:100%;
@@ -39,199 +38,15 @@ header{
   margin:0 auto;
 }
 
-/* =====================================
-   3D PREMIUM ADVERTISEMENT
-===================================== */
+/* NEWS TICKER */
 
 .rm-ad-banner{
   position:relative;
-  isolation:isolate;
-  overflow:hidden;
   width:100%;
-  min-height:145px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:17px 15px 48px;
-  text-align:center;
-  color:#fffaf0;
-  perspective:1000px;
-  transform-style:preserve-3d;
-
-  background:
-    radial-gradient(circle at 50% 50%,#b33c76 0%,#922653 50%,#641c3a 100%);
-
-  border-top:2px solid #d6ad60;
-  border-bottom:3px solid #d6ad60;
-
-  box-shadow:
-    inset 0 5px 20px rgba(255,255,255,.12),
-    inset 0 -8px 20px rgba(40,0,20,.25);
-}
-
-/* Gold Light Sweep */
-
-.rm-ad-banner::before{
-  content:"";
-  position:absolute;
-  top:-60%;
-  bottom:-60%;
-  left:-35%;
-  width:28%;
-  z-index:-1;
-  transform:rotate(22deg);
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,235,174,.5),
-    rgba(255,255,255,.3),
-    transparent
-  );
-
-  animation:rmAdLightSweep 5s ease-in-out infinite;
-  pointer-events:none;
-}
-
-/* Background Sparkle Pattern */
-
-.rm-ad-banner::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-2;
-
-  background:
-    radial-gradient(circle at 12% 25%,rgba(255,226,153,.25) 0 2px,transparent 3px),
-    radial-gradient(circle at 85% 72%,rgba(255,226,153,.22) 0 2px,transparent 3px),
-    radial-gradient(circle at 50% 15%,rgba(255,255,255,.12) 0 2px,transparent 3px);
-
-  background-size:46px 46px,58px 58px,70px 70px;
-  pointer-events:none;
-}
-
-/* Advertisement Content */
-
-.rm-ad-content{
-  position:relative;
-  z-index:1;
-  width:min(100%,900px);
-  min-height:80px;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
-
-  transform-style:preserve-3d;
-  animation:rmAdFloat3D 4s ease-in-out infinite;
-}
-
-/* Small Heading */
-
-.rm-ad-kicker{
-  color:#ffe7ad;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:2px;
-  transform:translateZ(45px);
-
-  text-shadow:
-    0 0 5px #ffe7ad,
-    0 0 12px rgba(255,220,140,.8);
-
-  animation:rmAdKickerGlow 2.8s ease-in-out infinite;
-}
-
-/* Main 3D Heading */
-
-.rm-ad-title{
+  height:36px;
   margin:0;
-  color:#fff;
-  font-size:clamp(20px,3.5vw,32px);
-  line-height:1.4;
-  font-weight:800;
-
-  transform:translateZ(35px);
-
-  text-shadow:
-    1px 1px 0 #d6ad60,
-    2px 2px 0 #b8893c,
-    3px 3px 0 #8b5d26,
-    4px 5px 8px rgba(30,0,15,.45),
-    0 0 18px rgba(255,225,160,.25);
-
-  opacity:1;
-  transition:opacity .45s ease,transform .45s ease;
+  padding:0;
 }
-
-/* Subtitle */
-
-.rm-ad-subtitle{
-  margin:0;
-  color:#ffedc9;
-  font-size:clamp(13px,2vw,16px);
-  line-height:1.5;
-
-  transform:translateZ(25px);
-
-  text-shadow:
-    1px 2px 4px rgba(30,0,15,.45),
-    0 0 10px rgba(255,225,160,.3);
-
-  opacity:1;
-  transition:opacity .45s ease,transform .45s ease;
-}
-
-/* Text Transition */
-
-.rm-ad-content.rm-ad-changing .rm-ad-title,
-.rm-ad-content.rm-ad-changing .rm-ad-subtitle{
-  opacity:0;
-  transform:translateY(12px) translateZ(0);
-}
-
-/* 3D Sparkles */
-
-.rm-ad-sparkle{
-  position:absolute;
-  color:#ffe7a6;
-  font-size:20px;
-  filter:drop-shadow(0 0 7px #ffdf91);
-  text-shadow:0 0 10px rgba(255,226,153,.8);
-  pointer-events:none;
-}
-
-.rm-ad-sparkle-one{
-  left:7%;
-  top:15%;
-  animation:rmAdSparkle3D 2.5s ease-in-out infinite;
-}
-
-.rm-ad-sparkle-two{
-  right:8%;
-  top:15%;
-  animation:rmAdSparkle3D 3s ease-in-out infinite .5s;
-}
-
-.rm-ad-sparkle-three{
-  left:13%;
-  bottom:35%;
-  font-size:14px;
-  animation:rmAdSparkle3D 2.8s ease-in-out infinite 1s;
-}
-
-.rm-ad-sparkle-four{
-  right:14%;
-  bottom:35%;
-  font-size:14px;
-  animation:rmAdSparkle3D 3.2s ease-in-out infinite 1.5s;
-}
-
-/* =====================================
-   NEWS TICKER
-===================================== */
 
 .rm-ad-ticker{
   position:absolute;
@@ -239,11 +54,9 @@ header{
   left:0;
   width:100%;
   height:36px;
-
   display:flex;
   align-items:center;
   overflow:hidden;
-
   background:linear-gradient(90deg,#54172f,#852448,#54172f);
   border-top:1px solid #d6ad60;
   z-index:5;
@@ -252,14 +65,11 @@ header{
 .rm-ad-ticker-label{
   flex-shrink:0;
   height:100%;
-
   display:flex;
   align-items:center;
   padding:0 12px;
-
   background:#d6ad60;
   color:#5b1934;
-
   font-size:12px;
   font-weight:bold;
   white-space:nowrap;
@@ -292,69 +102,12 @@ header{
   animation-play-state:paused;
 }
 
-/* =====================================
-   ANIMATION KEYFRAMES
-===================================== */
-
-@keyframes rmAdLightSweep{
-  0%{
-    left:-35%;
-    opacity:0;
-  }
-  12%{
-    opacity:1;
-  }
-  55%{
-    left:115%;
-    opacity:.8;
-  }
-  70%,100%{
-    left:115%;
-    opacity:0;
-  }
-}
-
-@keyframes rmAdFloat3D{
-  0%,100%{
-    transform:translateY(0) rotateX(0deg);
-  }
-  50%{
-    transform:translateY(-5px) rotateX(2deg);
-  }
-}
-
-@keyframes rmAdSparkle3D{
-  0%,100%{
-    transform:translateZ(0) scale(.7) rotateY(0deg);
-    opacity:.4;
-  }
-  50%{
-    transform:translateZ(35px) scale(1.35) rotateY(180deg);
-    opacity:1;
-  }
-}
-
-@keyframes rmAdKickerGlow{
-  0%,100%{
-    text-shadow:0 0 3px rgba(255,231,173,.2);
-  }
-  50%{
-    text-shadow:0 0 12px rgba(255,231,173,.9);
-  }
-}
-
 @keyframes rmAdTickerMove{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-50%);
-  }
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
 }
 
-/* =====================================
-   NAVIGATION
-===================================== */
+/* NAVIGATION */
 
 nav{
   background:#f7dce7;
@@ -379,11 +132,28 @@ nav a:hover{
   color:#bd8b37;
 }
 
-/* =====================================
+/* HERO SECTION */
 
-/* =====================================
-   SECTION TITLES
-===================================== */
+.hero{
+  background:linear-gradient(135deg,#fff3e0,#fce5ed);
+  text-align:center;
+  padding:85px 15px;
+  line-height:2;
+}
+
+.hero h2{
+  color:#8c3156;
+  font-size:32px;
+  margin:0 0 25px;
+}
+
+.hero p{
+  font-size:19px;
+  line-height:2;
+  margin-bottom:35px;
+}
+
+/* SECTION TITLES */
 
 .section-title{
   text-align:center;
@@ -402,9 +172,7 @@ nav a:hover{
   border-radius:5px;
 }
 
-/* =====================================
-   CATEGORY CARDS WITH IMAGES
-===================================== */
+/* CATEGORY CARDS */
 
 .categories{
   display:grid;
@@ -436,7 +204,7 @@ nav a:hover{
 .category-card img{
   display:block;
   width:100%;
-  aspect-ratio: 1.45 / 1;
+  aspect-ratio:1.45 / 1;
   object-fit:cover;
   transition:transform .45s ease;
 }
@@ -453,9 +221,7 @@ nav a:hover{
   background:#fff;
 }
 
-/* =====================================
-   PRODUCTS
-===================================== */
+/* PRODUCTS */
 
 .products{
   display:grid;
@@ -530,9 +296,7 @@ nav a:hover{
   color:#806b74;
 }
 
-/* =====================================
-   BUTTONS
-===================================== */
+/* BUTTONS */
 
 .order,.view-btn{
   display:inline-block;
@@ -562,9 +326,7 @@ nav a:hover{
   margin:5px 0 20px;
 }
 
-/* =====================================
-   PRODUCT DETAILS
-===================================== */
+/* PRODUCT DETAILS */
 
 .details{
   max-width:1000px;
@@ -599,9 +361,7 @@ nav a:hover{
   line-height:1.9;
 }
 
-/* =====================================
-   CONTACT
-===================================== */
+/* CONTACT */
 
 .contact{
   background:linear-gradient(135deg,#f9e1eb,#fff3e0);
@@ -637,9 +397,7 @@ nav a:hover{
   color:white;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
+/* FOOTER */
 
 footer{
   background:#762342;
@@ -654,11 +412,26 @@ footer{
   display:none!important;
 }
 
-/* =====================================
-   MOBILE RESPONSIVE
-===================================== */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:650px){
+
+  .rm-ad-banner{
+    height:33px;
+  }
+
+  .rm-ad-ticker{
+    height:33px;
+  }
+
+  .rm-ad-ticker-label{
+    padding:0 8px;
+    font-size:10px;
+  }
+
+  .rm-ad-ticker-track span{
+    font-size:11px;
+  }
 
   .categories{
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -692,46 +465,17 @@ footer{
     padding:12px 4px;
   }
 
-  /* 3D AD MOBILE */
-
-  .rm-ad-banner{
-    min-height:135px;
-    padding:14px 30px 43px;
+  .hero{
+    padding:65px 12px;
   }
 
-  .rm-ad-kicker{
-    font-size:10px;
-    letter-spacing:1.2px;
+  .hero h2{
+    font-size:27px;
   }
 
-  .rm-ad-title{
-    font-size:20px;
+  .hero p{
+    font-size:16px;
   }
-
-  .rm-ad-subtitle{
-    font-size:12px;
-  }
-
-  .rm-ad-sparkle-one{left:4%}
-  .rm-ad-sparkle-two{right:4%}
-  .rm-ad-sparkle-three{left:6%}
-  .rm-ad-sparkle-four{right:6%}
-
-  /* NEWS TICKER MOBILE */
-
-  .rm-ad-ticker{
-    height:33px;
-  }
-
-  .rm-ad-ticker-label{
-    padding:0 8px;
-    font-size:10px;
-  }
-
-  .rm-ad-ticker-track span{
-    font-size:11px;
-  }
-
 }
 
 @media(max-width:360px){
@@ -740,44 +484,25 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .rm-ad-title{
-    font-size:18px;
-  }
-
-  .rm-ad-kicker{
-    font-size:9px;
-  }
-
 }
 
-/* REDUCED MOTION ACCESSIBILITY */
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion:reduce){
 
-  .rm-ad-banner::before,
-  .rm-ad-content,
-  .rm-ad-sparkle,
-  .rm-ad-kicker,
-  .rm-ad-ticker-track{
-    animation:none!important;
-  }
-
-  .rm-ad-title,
-  .rm-ad-subtitle,
+  .rm-ad-ticker-track,
   .category-card img{
+    animation:none!important;
     transition:none!important;
   }
 
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =====================================
-     HEADER / MAIN BANNER
-===================================== -->
+<!-- HEADER / MAIN BANNER -->
 
 <header>
 
@@ -792,9 +517,45 @@ footer{
 
 </header>
 
-<!-- =====================================
-     NAVIGATION
-===================================== -->
+
+<!-- NEWS TICKER ONLY -->
+
+<section class="rm-ad-banner" aria-label="রূপমায়া আপডেট">
+
+  <div class="rm-ad-ticker">
+
+    <div class="rm-ad-ticker-label">
+      রূপমায়া আপডেট
+    </div>
+
+    <div class="rm-ad-ticker-window">
+
+      <div class="rm-ad-ticker-track">
+
+        <span>
+          ✦ সারা বাংলাদেশে কুরিয়ার ডেলিভারি
+          ✦ রূপমায়ার নতুন কালেকশন এসেছে
+          ✦ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
+          ✦ Ladies &amp; Kids Collection
+        </span>
+
+        <span aria-hidden="true">
+          ✦ সারা বাংলাদেশে কুরিয়ার ডেলিভারি
+          ✦ রূপমায়ার নতুন কালেকশন এসেছে
+          ✦ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
+          ✦ Ladies &amp; Kids Collection
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -817,9 +578,7 @@ footer{
 </nav>
 
 
-<!-- =====================================
-     HOME PAGE
-===================================== -->
+<!-- HOME PAGE -->
 
 <main id="homePage">
 
@@ -844,73 +603,50 @@ footer{
   </h2>
 
 
-  <!-- CATEGORY CARDS WITH PHOTOS -->
+  <!-- CATEGORY CARDS -->
 
   <div class="categories">
 
     <div class="category-card" onclick="showCategory('borka')">
-
       <img src="./Images/01-borka.jpg"
            alt="বোরকা কালেকশন"
            loading="lazy">
-
       <h3>বোরকা কালেকশন</h3>
-
     </div>
 
-
     <div class="category-card" onclick="showCategory('threepiece')">
-
       <img src="./Images/02-threepiece.jpg"
            alt="থ্রি-পিস কালেকশন"
            loading="lazy">
-
       <h3>থ্রি-পিস কালেকশন</h3>
-
     </div>
 
-
     <div class="category-card" onclick="showCategory('saree')">
-
       <img src="./Images/03-saree.jpg"
            alt="শাড়ি কালেকশন"
            loading="lazy">
-
       <h3>শাড়ি কালেকশন</h3>
-
     </div>
 
-
     <div class="category-card" onclick="showCategory('kids')">
-
       <img src="./Images/04-kids.jpg"
            alt="বাচ্চাদের পোশাক কালেকশন"
            loading="lazy">
-
       <h3>বাচ্চাদের কালেকশন</h3>
-
     </div>
 
-
     <div class="category-card" onclick="showCategory('tops')">
-
       <img src="./Images/05-tops.jpg"
            alt="টপস কালেকশন"
            loading="lazy">
-
       <h3>টপস কালেকশন</h3>
-
     </div>
 
-
     <div class="category-card" onclick="showCategory('kurti')">
-
       <img src="./Images/06-kurti.jpg"
            alt="কুর্তি কালেকশন"
            loading="lazy">
-
       <h3>কুর্তি কালেকশন</h3>
-
     </div>
 
   </div>
@@ -918,9 +654,7 @@ footer{
 </main>
 
 
-<!-- =====================================
-     CATEGORY PAGE
-===================================== -->
+<!-- CATEGORY PAGE -->
 
 <section id="categoryPage" class="hidden">
 
@@ -939,9 +673,7 @@ footer{
 </section>
 
 
-<!-- =====================================
-     PRODUCT DETAILS PAGE
-===================================== -->
+<!-- PRODUCT DETAILS PAGE -->
 
 <section id="detailPage" class="hidden">
 
@@ -958,9 +690,7 @@ footer{
 </section>
 
 
-<!-- =====================================
-     CONTACT PAGE
-===================================== -->
+<!-- CONTACT PAGE -->
 
 <section id="contactPage" class="hidden">
 
@@ -1006,9 +736,7 @@ footer{
 </section>
 
 
-<!-- =====================================
-     FOOTER
-===================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1023,9 +751,7 @@ footer{
 
 <script>
 
-/* ===================================
-   PRODUCT DATABASE
-=================================== */
+/* PRODUCT DATABASE */
 
 const products = [
 
@@ -1095,8 +821,6 @@ const products = [
     ]
   },
 
-  /* KIDS WEAR - RM007 */
-
   {
     id:"RM007",
     category:"kids",
@@ -1110,8 +834,6 @@ const products = [
     ]
   },
 
-  /* KIDS WEAR - RM008 */
-
   {
     id:"RM008",
     category:"kids",
@@ -1123,8 +845,6 @@ const products = [
       "./Images/kids-rm008-1.jpg"
     ]
   },
-
-  /* KIDS WEAR - RM009 */
 
   {
     id:"RM009",
@@ -1141,22 +861,15 @@ const products = [
 ];
 
 
-/* ===================================
-   CATEGORY NAMES
-=================================== */
+/* CATEGORY NAMES */
 
 const categoryNames = {
 
   borka:"বোরকা কালেকশন",
-
   threepiece:"থ্রি-পিস কালেকশন",
-
   saree:"শাড়ি কালেকশন",
-
   kids:"বাচ্চাদের পোশাক কালেকশন",
-
   tops:"টপস কালেকশন",
-
   kurti:"কুর্তি কালেকশন"
 
 };
@@ -1164,9 +877,7 @@ const categoryNames = {
 let currentCategory = "borka";
 
 
-/* ===================================
-   OFFER PRICE CALCULATION
-=================================== */
+/* OFFER PRICE CALCULATION */
 
 function getOfferPrice(product){
 
@@ -1177,9 +888,7 @@ function getOfferPrice(product){
 }
 
 
-/* ===================================
-   PRICE DISPLAY
-=================================== */
+/* PRICE DISPLAY */
 
 function priceMarkup(product){
 
@@ -1208,9 +917,7 @@ function priceMarkup(product){
 }
 
 
-/* ===================================
-   PAGE CONTROL
-=================================== */
+/* PAGE CONTROL */
 
 function hideAllPages(){
 
@@ -1236,9 +943,7 @@ function showHome(){
 }
 
 
-/* ===================================
-   SHOW CATEGORY
-=================================== */
+/* SHOW CATEGORY */
 
 function showCategory(category){
 
@@ -1323,9 +1028,7 @@ function showCategory(category){
 }
 
 
-/* ===================================
-   PRODUCT DETAILS
-=================================== */
+/* PRODUCT DETAILS */
 
 function showDetails(id){
 
@@ -1387,9 +1090,7 @@ function showDetails(id){
 }
 
 
-/* ===================================
-   BACK TO CATEGORY
-=================================== */
+/* BACK TO CATEGORY */
 
 function backToCategory(){
 
@@ -1398,9 +1099,7 @@ function backToCategory(){
 }
 
 
-/* ===================================
-   CONTACT
-=================================== */
+/* CONTACT */
 
 function showContact(){
 
@@ -1413,9 +1112,7 @@ function showContact(){
 }
 
 
-/* ===================================
-   WHATSAPP ORDER
-=================================== */
+/* WHATSAPP ORDER */
 
 function orderNow(product){
 
@@ -1456,71 +1153,6 @@ function orderNow(product){
   window.open(url,"_blank","noopener");
 
 }
-
-
-/* =====================================
-   RUPMAYA 3D ADVERTISEMENT AUTO SLIDER
-===================================== */
-
-(function(){
-
-  const rmAdSlides = [
-
-    {
-      title:"রূপমায়ার নতুন কালেকশন এসেছে!",
-      subtitle:"আপনার পছন্দের পোশাক বেছে নিন আজই ✨"
-    },
-
-    {
-      title:"সারা বাংলাদেশে কুরিয়ার ডেলিভারি",
-      subtitle:"ঘরে বসেই অর্ডার করুন আপনার পছন্দের পোশাক 🚚"
-    },
-
-    {
-      title:"আপনার সাজে থাকুক রূপমায়ার ছোঁয়া",
-      subtitle:"লেডিস ও কিডস কালেকশনে খুঁজে নিন মনের মতো ডিজাইন 👗"
-    }
-
-  ];
-
-  const rmAdContent = document.getElementById("rmAdContent");
-
-  const rmAdTitle = document.getElementById("rmAdTitle");
-
-  const rmAdSubtitle = document.getElementById("rmAdSubtitle");
-
-  if(!rmAdContent || !rmAdTitle || !rmAdSubtitle){
-    return;
-  }
-
-  if(
-    window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ){
-    return;
-  }
-
-  let rmAdIndex = 0;
-
-  window.setInterval(function(){
-
-    rmAdContent.classList.add("rm-ad-changing");
-
-    window.setTimeout(function(){
-
-      rmAdIndex = (rmAdIndex + 1) % rmAdSlides.length;
-
-      rmAdTitle.textContent = rmAdSlides[rmAdIndex].title;
-
-      rmAdSubtitle.textContent = rmAdSlides[rmAdIndex].subtitle;
-
-      rmAdContent.classList.remove("rm-ad-changing");
-
-    },450);
-
-  },4000);
-
-})();
 
 </script>
 

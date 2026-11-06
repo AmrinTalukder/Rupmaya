@@ -15,18 +15,181 @@ body{
   color:#49313b;
 }
 
-  
-/* HEADER */
+/* =========================================
+   RUPMAYA PREMIUM ANIMATED AD BANNER
+========================================= */
+
+.rm-ad-banner{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  width:100%;
+  min-height:112px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 16px;
+  text-align:center;
+  color:#fffaf0;
+  background:linear-gradient(115deg,#762342 0%,#a02d65 48%,#762342 100%);
+  border-bottom:3px solid #d6ad60;
+}
+
+.rm-ad-banner::before{
+  content:"";
+  position:absolute;
+  inset:-60% auto -60% -35%;
+  width:28%;
+  z-index:-1;
+  transform:rotate(22deg);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,235,174,.5),
+    rgba(255,255,255,.2),
+    transparent
+  );
+  animation:rmAdLightSweep 5s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.rm-ad-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 12% 25%,rgba(255,226,153,.22) 0 2px,transparent 3px),
+    radial-gradient(circle at 85% 72%,rgba(255,226,153,.2) 0 2px,transparent 3px);
+  background-size:46px 46px,58px 58px;
+  pointer-events:none;
+}
+
+.rm-ad-content{
+  position:relative;
+  z-index:1;
+  width:min(100%,900px);
+  min-height:70px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+
+.rm-ad-kicker{
+  color:#ffe7ad;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  animation:rmAdKickerGlow 2.8s ease-in-out infinite;
+}
+
+.rm-ad-title{
+  margin:0;
+  color:#fff;
+  font-size:clamp(20px,3.5vw,30px);
+  line-height:1.35;
+  font-weight:800;
+  text-shadow:0 2px 12px rgba(40,0,20,.28);
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .45s ease,transform .45s ease;
+}
+
+.rm-ad-subtitle{
+  margin:0;
+  color:#ffedc9;
+  font-size:clamp(13px,2vw,16px);
+  line-height:1.5;
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .45s ease,transform .45s ease;
+}
+
+.rm-ad-content.rm-ad-changing .rm-ad-title,
+.rm-ad-content.rm-ad-changing .rm-ad-subtitle{
+  opacity:0;
+  transform:translateY(12px);
+}
+
+.rm-ad-sparkle{
+  position:absolute;
+  color:#ffe7a6;
+  font-size:19px;
+  text-shadow:0 0 10px rgba(255,226,153,.8);
+  animation:rmAdSparkle 2.2s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.rm-ad-sparkle-one{
+  left:7%;
+  top:20%;
+}
+
+.rm-ad-sparkle-two{
+  right:8%;
+  top:18%;
+  animation-delay:.7s;
+}
+
+.rm-ad-sparkle-three{
+  left:13%;
+  bottom:15%;
+  font-size:14px;
+  animation-delay:1.2s;
+}
+
+.rm-ad-sparkle-four{
+  right:14%;
+  bottom:13%;
+  font-size:14px;
+  animation-delay:1.6s;
+}
+
+@keyframes rmAdLightSweep{
+  0%{left:-35%;opacity:0}
+  12%{opacity:1}
+  55%{left:115%;opacity:.8}
+  70%,100%{left:115%;opacity:0}
+}
+
+@keyframes rmAdSparkle{
+  0%,100%{
+    opacity:.35;
+    transform:scale(.7) rotate(0);
+  }
+  50%{
+    opacity:1;
+    transform:scale(1.25) rotate(25deg);
+  }
+}
+
+@keyframes rmAdKickerGlow{
+  0%,100%{
+    text-shadow:0 0 3px rgba(255,231,173,.2);
+  }
+  50%{
+    text-shadow:0 0 12px rgba(255,231,173,.9);
+  }
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
 header{
   width:100%;
   background:#fce5ed;
   text-align:center;
 }
+
 .logo{
   width:95px;
   height:auto;
   margin:12px auto 0;
 }
+
 .banner{
   display:block;
   width:100%;
@@ -34,7 +197,10 @@ header{
   margin:0 auto;
 }
 
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION
+========================================= */
+
 nav{
   background:#f7dce7;
   padding:14px 8px;
@@ -44,6 +210,7 @@ nav{
   top:0;
   z-index:100;
 }
+
 nav a{
   display:inline-block;
   color:#842b50;
@@ -52,24 +219,40 @@ nav a{
   font-weight:bold;
   font-size:14px;
 }
+
 nav a:hover{color:#bd8b37}
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
+
 .hero{
   text-align:center;
   padding:35px 15px;
   background:linear-gradient(135deg,#fff0f5,#fff8e9,#fce5ed);
 }
-.hero h2{color:#8c3156;font-size:27px}
-.hero p{line-height:1.9;font-size:15px}
 
-/* TITLES */
+.hero h2{
+  color:#8c3156;
+  font-size:27px;
+}
+
+.hero p{
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* =========================================
+   TITLES
+========================================= */
+
 .section-title{
   text-align:center;
   color:#8c3156;
   margin:35px 0 22px;
   font-size:25px;
 }
+
 .section-title:after{
   content:"";
   display:block;
@@ -80,7 +263,10 @@ nav a:hover{color:#bd8b37}
   border-radius:5px;
 }
 
-/* CATEGORY */
+/* =========================================
+   CATEGORY
+========================================= */
+
 .categories{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -89,6 +275,7 @@ nav a:hover{color:#bd8b37}
   max-width:1000px;
   margin:auto;
 }
+
 .category-card{
   background:white;
   border:1px solid #efd6df;
@@ -100,18 +287,27 @@ nav a:hover{color:#bd8b37}
   box-shadow:0 3px 10px #64284112;
   transition:.2s;
 }
+
 .category-card:hover{
   transform:translateY(-4px);
   border-color:#d6ad60;
 }
+
 .category-icon{
   font-size:36px;
   display:block;
   margin-bottom:10px;
 }
-.category-card h3{font-size:16px;margin:0}
 
-/* PRODUCTS */
+.category-card h3{
+  font-size:16px;
+  margin:0;
+}
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
 .products{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -120,6 +316,7 @@ nav a:hover{color:#bd8b37}
   max-width:1100px;
   margin:auto;
 }
+
 .card{
   background:white;
   border:1px solid #efd6df;
@@ -129,6 +326,7 @@ nav a:hover{color:#bd8b37}
   padding-bottom:15px;
   box-shadow:0 3px 10px #64284112;
 }
+
 .card img{
   width:100%;
   height:250px;
@@ -136,29 +334,38 @@ nav a:hover{color:#bd8b37}
   display:block;
   cursor:pointer;
 }
+
 .card h3{
   font-size:17px;
   margin:13px 4px 7px;
   color:#692744;
 }
-.card p{margin:7px 0;font-size:14px}
+
+.card p{
+  margin:7px 0;
+  font-size:14px;
+}
+
 .price{
   color:#a02d65;
   font-weight:bold;
   font-size:19px!important;
   margin:10px 0!important;
 }
+
 .old-price{
   color:#888;
   text-decoration:line-through;
   font-size:14px;
   margin-right:7px;
 }
+
 .offer-price{
   color:#a02d65;
   font-weight:bold;
   font-size:20px;
 }
+
 .discount-badge{
   display:inline-block;
   background:#a02d65;
@@ -168,9 +375,16 @@ nav a:hover{color:#bd8b37}
   font-size:12px;
   margin:5px;
 }
-.small{font-size:12px;color:#806b74}
 
-/* BUTTONS */
+.small{
+  font-size:12px;
+  color:#806b74;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
 .order,.view-btn{
   display:inline-block;
   background:#a02d65;
@@ -184,7 +398,11 @@ nav a:hover{color:#bd8b37}
   cursor:pointer;
   margin:4px;
 }
-.order:hover,.view-btn:hover{background:#7d2049}
+
+.order:hover,.view-btn:hover{
+  background:#7d2049;
+}
+
 .back-btn{
   background:#842b50;
   color:white;
@@ -195,12 +413,16 @@ nav a:hover{color:#bd8b37}
   margin:5px 0 20px;
 }
 
-/* DETAILS */
+/* =========================================
+   DETAILS
+========================================= */
+
 .details{
   max-width:1000px;
   margin:auto;
   padding:15px;
 }
+
 .detail-box{
   background:white;
   border:1px solid #efd6df;
@@ -208,12 +430,14 @@ nav a:hover{color:#bd8b37}
   padding:18px;
   box-shadow:0 3px 10px #64284112;
 }
+
 .detail-gallery{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:12px;
   margin:20px 0;
 }
+
 .detail-gallery img{
   width:100%;
   height:250px;
@@ -221,9 +445,15 @@ nav a:hover{color:#bd8b37}
   border-radius:9px;
   background:#fce5ed;
 }
-.description{line-height:1.9}
 
-/* CONTACT */
+.description{
+  line-height:1.9;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
 .contact{
   background:linear-gradient(135deg,#f9e1eb,#fff3e0);
   text-align:center;
@@ -231,7 +461,11 @@ nav a:hover{color:#bd8b37}
   line-height:2;
   border-top:2px solid #d6ad60;
 }
-.contact h2{color:#842b50}
+
+.contact h2{
+  color:#842b50;
+}
+
 .social-links{
   display:flex;
   justify-content:center;
@@ -239,6 +473,7 @@ nav a:hover{color:#bd8b37}
   gap:15px;
   margin-top:15px;
 }
+
 .social-links a{
   color:#842b50;
   font-weight:bold;
@@ -247,12 +482,16 @@ nav a:hover{color:#bd8b37}
   border:1px solid #d6ad60;
   border-radius:6px;
 }
+
 .social-links a:hover{
   background:#842b50;
   color:white;
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
+
 footer{
   background:#762342;
   color:white;
@@ -261,39 +500,130 @@ footer{
   line-height:1.9;
   border-top:3px solid #d6ad60;
 }
-.hidden{display:none!important}
 
-/* MOBILE RESPONSIVE */
+.hidden{
+  display:none!important;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media(max-width:650px){
+
   .categories{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:10px;
   }
+
   .products{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:10px;
   }
-  .card img{height:190px}
+
+  .card img{
+    height:190px;
+  }
+
   .detail-gallery{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-  .detail-gallery img{height:180px}
+
+  .detail-gallery img{
+    height:180px;
+  }
+
   nav a{
     font-size:12px;
     margin:5px 6px;
   }
-  .category-card h3{font-size:14px}
+
+  .category-card h3{
+    font-size:14px;
+  }
+
+  /* Animated banner mobile design */
+  .rm-ad-banner{
+    min-height:108px;
+    padding:17px 38px;
+  }
+
+  .rm-ad-kicker{
+    font-size:10px;
+    letter-spacing:1.4px;
+  }
+
+  .rm-ad-title{
+    font-size:20px;
+  }
+
+  .rm-ad-subtitle{
+    font-size:12px;
+  }
+
+  .rm-ad-sparkle-one{left:4%}
+  .rm-ad-sparkle-two{right:4%}
+  .rm-ad-sparkle-three{left:6%}
+  .rm-ad-sparkle-four{right:6%}
 }
+
 @media(max-width:360px){
-  .products{grid-template-columns:1fr}
+  .products{
+    grid-template-columns:1fr;
+  }
 }
+
+/* Respect visitors who prefer reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .rm-ad-banner::before,
+  .rm-ad-sparkle,
+  .rm-ad-kicker{
+    animation:none!important;
+  }
+
+  .rm-ad-title,
+  .rm-ad-subtitle{
+    transition:none!important;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================================
+     RUPMAYA PREMIUM ANIMATED ADVERTISEMENT
+========================================= -->
+
+<section class="rm-ad-banner" aria-label="রূপমায়ার বিশেষ বিজ্ঞাপন">
+
+  <span class="rm-ad-sparkle rm-ad-sparkle-one" aria-hidden="true">✦</span>
+  <span class="rm-ad-sparkle rm-ad-sparkle-two" aria-hidden="true">✧</span>
+  <span class="rm-ad-sparkle rm-ad-sparkle-three" aria-hidden="true">✦</span>
+  <span class="rm-ad-sparkle rm-ad-sparkle-four" aria-hidden="true">✧</span>
+
+  <div class="rm-ad-content" id="rmAdContent">
+
+    <div class="rm-ad-kicker">
+      ✧ RUPMAYA · LADIES &amp; KIDS COLLECTION ✧
+    </div>
+
+    <h2 class="rm-ad-title" id="rmAdTitle">
+      রূপমায়ার নতুন কালেকশন এসেছে!
+    </h2>
+
+    <p class="rm-ad-subtitle" id="rmAdSubtitle">
+      আপনার পছন্দের পোশাক বেছে নিন আজই ✨
+    </p>
+
+  </div>
+</section>
+
 <!-- HEADER -->
+
 <header>
+
   <img class="logo"
        src="./rupmaya-logo.png"
        alt="রূপমায়া লোগো"
@@ -302,32 +632,48 @@ footer{
   <img class="banner"
        src="./rupmaya-banner.png"
        alt="রূপমায়া Ladies & Kids Collection">
+
 </header>
 
 <!-- NAVIGATION -->
+
 <nav>
+
   <a href="#" onclick="showHome();return false;">হোম</a>
+
   <a href="#" onclick="showCategory('borka');return false;">বোরকা</a>
+
   <a href="#" onclick="showCategory('threepiece');return false;">থ্রি-পিস</a>
+
   <a href="#" onclick="showCategory('saree');return false;">শাড়ি</a>
+
   <a href="#" onclick="showCategory('kids');return false;">বাচ্চাদের পোশাক</a>
+
   <a href="#" onclick="showCategory('tops');return false;">টপস</a>
+
   <a href="#" onclick="showCategory('kurti');return false;">কুর্তি</a>
+
   <a href="#" onclick="showContact();return false;">যোগাযোগ</a>
+
 </nav>
 
 <!-- HOME PAGE -->
+
 <main id="homePage">
 
   <section class="hero">
+
     <h2>স্বাগতম রূপমায়া'য় 🤍</h2>
+
     <p>
       যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
       আপনার পছন্দের পোশাক বেছে নিন।
     </p>
+
     <a class="order" href="#collections">
       আমাদের কালেকশন দেখুন
     </a>
+
   </section>
 
   <h2 class="section-title" id="collections">
@@ -367,36 +713,55 @@ footer{
     </div>
 
   </div>
+
 </main>
 
 <!-- CATEGORY PAGE -->
+
 <section id="categoryPage" class="hidden">
+
   <div class="container">
+
     <button class="back-btn" onclick="showHome()">
       ← হোমে ফিরে যান
     </button>
 
     <h2 class="section-title" id="categoryTitle"></h2>
+
     <div class="products" id="productList"></div>
+
   </div>
+
 </section>
 
 <!-- PRODUCT DETAILS PAGE -->
+
 <section id="detailPage" class="hidden">
+
   <div class="details">
+
     <button class="back-btn" onclick="backToCategory()">
       ← কালেকশনে ফিরে যান
     </button>
+
     <div id="productDetails"></div>
+
   </div>
+
 </section>
 
 <!-- CONTACT PAGE -->
+
 <section id="contactPage" class="hidden">
+
   <div class="contact">
+
     <h2>অর্ডার ও যোগাযোগ</h2>
+
     <p>📍 বগুড়া, বাংলাদেশ</p>
+
     <p>📞 01343953665</p>
+
     <p>🚚 সারা বাংলাদেশে কুরিয়ার ডেলিভারি</p>
 
     <a class="order"
@@ -409,6 +774,7 @@ footer{
     <p><strong>আমাদের সোশ্যাল মিডিয়া</strong></p>
 
     <div class="social-links">
+
       <a href="https://www.facebook.com/rupmaya.bd.collection/"
          target="_blank"
          rel="noopener noreferrer">Facebook</a>
@@ -420,15 +786,23 @@ footer{
       <a href="https://www.tiktok.com/@rupmaya.bd.collection"
          target="_blank"
          rel="noopener noreferrer">TikTok</a>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
+
   <strong>রূপমায়া</strong><br>
+
   যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
+
   © 2026 Rupmaya Ladies &amp; Kids Collection
+
 </footer>
 
 <script>
@@ -540,30 +914,45 @@ const products = [
 ];
 
 
-/* CATEGORY NAMES */
+/* ===================================
+   CATEGORY NAMES
+=================================== */
 
 const categoryNames = {
+
   borka:"বোরকা কালেকশন",
+
   threepiece:"থ্রি-পিস কালেকশন",
+
   saree:"শাড়ি কালেকশন",
+
   kids:"বাচ্চাদের পোশাক কালেকশন",
+
   tops:"টপস কালেকশন",
+
   kurti:"কুর্তি কালেকশন"
+
 };
 
 let currentCategory = "borka";
 
 
-/* OFFER PRICE CALCULATION */
+/* ===================================
+   OFFER PRICE CALCULATION
+=================================== */
 
 function getOfferPrice(product){
+
   return product.discount
     ? Math.round(product.price * (100-product.discount) / 100)
     : product.price;
+
 }
 
 
-/* PRICE DISPLAY */
+/* ===================================
+   PRICE DISPLAY
+=================================== */
 
 function priceMarkup(product){
 
@@ -584,13 +973,17 @@ function priceMarkup(product){
         ${product.discount}% OFF
       </span>
     `;
+
   }
 
   return `৳ ${product.price.toLocaleString("en-US")}`;
+
 }
 
 
-/* PAGE CONTROL */
+/* ===================================
+   PAGE CONTROL
+=================================== */
 
 function hideAllPages(){
 
@@ -601,6 +994,7 @@ function hideAllPages(){
   document.getElementById("detailPage").classList.add("hidden");
 
   document.getElementById("contactPage").classList.add("hidden");
+
 }
 
 
@@ -611,10 +1005,13 @@ function showHome(){
   document.getElementById("homePage").classList.remove("hidden");
 
   window.scrollTo(0,0);
+
 }
 
 
-/* SHOW CATEGORY */
+/* ===================================
+   SHOW CATEGORY
+=================================== */
 
 function showCategory(category){
 
@@ -639,6 +1036,7 @@ function showCategory(category){
 
     list.innerHTML =
       "<p>এই কালেকশনে এখনো কোনো পণ্য যোগ করা হয়নি।</p>";
+
   }
 
   filteredProducts.forEach(product => {
@@ -694,10 +1092,13 @@ function showCategory(category){
   });
 
   window.scrollTo(0,0);
+
 }
 
 
-/* PRODUCT DETAILS */
+/* ===================================
+   PRODUCT DETAILS
+=================================== */
 
 function showDetails(id){
 
@@ -749,21 +1150,28 @@ function showDetails(id){
       </button>
 
     </div>
+
   `;
 
   window.scrollTo(0,0);
+
 }
 
 
-/* BACK TO CATEGORY */
+/* ===================================
+   BACK TO CATEGORY
+=================================== */
 
 function backToCategory(){
 
   showCategory(currentCategory);
+
 }
 
 
-/* CONTACT */
+/* ===================================
+   CONTACT
+=================================== */
 
 function showContact(){
 
@@ -772,10 +1180,13 @@ function showContact(){
   document.getElementById("contactPage").classList.remove("hidden");
 
   window.scrollTo(0,0);
+
 }
 
 
-/* WHATSAPP ORDER */
+/* ===================================
+   WHATSAPP ORDER
+=================================== */
 
 function orderNow(product){
 
@@ -816,6 +1227,73 @@ function orderNow(product){
   window.open(url,"_blank","noopener");
 
 }
+
+
+/* =========================================
+   RUPMAYA AD BANNER AUTOMATIC TEXT SLIDER
+   Separate from existing website functions
+========================================= */
+
+(function(){
+
+  const rmAdSlides = [
+
+    {
+      title:"রূপমায়ার নতুন কালেকশন এসেছে!",
+      subtitle:"আপনার পছন্দের পোশাক বেছে নিন আজই ✨"
+    },
+
+    {
+      title:"সারা বাংলাদেশে কুরিয়ার ডেলিভারি",
+      subtitle:"ঘরে বসেই অর্ডার করুন আপনার পছন্দের পোশাক 🚚"
+    },
+
+    {
+      title:"আপনার সাজে থাকুক রূপমায়ার ছোঁয়া",
+      subtitle:"লেডিস ও কিডস কালেকশনে খুঁজে নিন মনের মতো ডিজাইন 👗"
+    }
+
+  ];
+
+  const rmAdContent = document.getElementById("rmAdContent");
+
+  const rmAdTitle = document.getElementById("rmAdTitle");
+
+  const rmAdSubtitle = document.getElementById("rmAdSubtitle");
+
+  if(!rmAdContent || !rmAdTitle || !rmAdSubtitle){
+    return;
+  }
+
+  /* Disable automatic movement for reduced-motion users */
+  if(
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ){
+    return;
+  }
+
+  let rmAdIndex = 0;
+
+  window.setInterval(function(){
+
+    rmAdContent.classList.add("rm-ad-changing");
+
+    window.setTimeout(function(){
+
+      rmAdIndex = (rmAdIndex + 1) % rmAdSlides.length;
+
+      rmAdTitle.textContent = rmAdSlides[rmAdIndex].title;
+
+      rmAdSubtitle.textContent = rmAdSlides[rmAdIndex].subtitle;
+
+      rmAdContent.classList.remove("rm-ad-changing");
+
+    },450);
+
+  },4000);
+
+})();
 
 </script>
 

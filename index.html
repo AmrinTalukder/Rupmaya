@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -218,7 +217,6 @@ html{scroll-behavior:auto}
 <a class="whatsapp-float" href="https://wa.me/8801343953665" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">☎</a>
 
 <script>
-/* PRODUCT DATABASE */
 const products = [
 {
 id:"RM001",category:"borka",name:"প্রিমিয়াম বোরকা",price:1250,
@@ -269,28 +267,46 @@ description:"সুন্দর হালকা সবুজ ফ্লোরা�
 images:["./Images/kids-rm009-1.jpg"]
 },
 
-/* RM010: 15% ছাড়ের পর বিক্রয়মূল্য ১১৯৯ টাকা */
+/* চারটি আলাদা থ্রি-পিস */
 {
-id:"RM010",
-category:"threepiece",
-name:"প্রিমিয়াম কটন ফ্লোরাল প্রিন্টেড থ্রি-পিস",
-
-/* ১৫% ছাড়ের পর ১১৯৯ টাকা রাখতে আগের মূল্য */
-price:1410.5882352941,
-discount:15,
-
-description:"রুচিশীল ডিজাইন ও আরামদায়ক সুতি কাপড়ের সমন্বয়ে তৈরি আকর্ষণীয় ফ্লোরাল প্রিন্টেড থ্রি-পিস। প্রতিদিনের ব্যবহার কিংবা বাইরে ঘুরতে যাওয়ার জন্য হতে পারে দারুণ একটি পছন্দ। সুন্দর কালার কম্বিনেশন ও মনোমুগ্ধকর প্রিন্ট আপনার সাজে যোগ করবে এক ভিন্ন মাত্রা।",
+id:"RM010",category:"threepiece",
+name:"প্রিমিয়াম কটন ফ্লোরাল থ্রি-পিস ১",
+price:1400,discount:15,
+description:"রুচিশীল ডিজাইন ও আরামদায়ক সুতি কাপড়ের আকর্ষণীয় থ্রি-পিস।",
 fabric:"প্রিমিয়াম সুতি (Cotton)",
 design:"ফ্লোরাল প্রিন্ট",
-colors:["মিন্ট গ্রিন","টিল ব্লু","পিঙ্ক","ল্যাভেন্ডার"],
-usage:"দৈনন্দিন ব্যবহার ও ক্যাজুয়াল আউটিং",
 items:"থ্রি-পিস",
-images:[
-"./Images/threepiece-rm010-1.jpg",
-"./Images/threepiece-rm010-2.jpg",
-"./Images/threepiece-rm010-3.jpg",
-"./Images/threepiece-rm010-4.jpg"
-]
+images:["./Images/threepiece-rm010-1.jpg"]
+},
+{
+id:"RM011",category:"threepiece",
+name:"প্রিমিয়াম কটন ফ্লোরাল থ্রি-পিস ২",
+price:1400,discount:15,
+description:"সুন্দর ডিজাইন ও আরামদায়ক কাপড়ের আকর্ষণীয় থ্রি-পিস।",
+fabric:"প্রিমিয়াম সুতি (Cotton)",
+design:"ফ্লোরাল প্রিন্ট",
+items:"থ্রি-পিস",
+images:["./Images/threepiece-rm010-2.jpg"]
+},
+{
+id:"RM012",category:"threepiece",
+name:"প্রিমিয়াম কটন ফ্লোরাল থ্রি-পিস ৩",
+price:1400,discount:15,
+description:"সুন্দর ডিজাইন ও আরামদায়ক কাপড়ের আকর্ষণীয় থ্রি-পিস।",
+fabric:"প্রিমিয়াম সুতি (Cotton)",
+design:"ফ্লোরাল প্রিন্ট",
+items:"থ্রি-পিস",
+images:["./Images/threepiece-rm010-3.jpg"]
+},
+{
+id:"RM013",category:"threepiece",
+name:"প্রিমিয়াম কটন ফ্লোরাল থ্রি-পিস ৪",
+price:1400,discount:15,
+description:"সুন্দর ডিজাইন ও আরামদায়ক কাপড়ের আকর্ষণীয় থ্রি-পিস।",
+fabric:"প্রিমিয়াম সুতি (Cotton)",
+design:"ফ্লোরাল প্রিন্ট",
+items:"থ্রি-পিস",
+images:["./Images/threepiece-rm010-4.jpg"]
 }
 ];
 
@@ -425,7 +441,7 @@ details.innerHTML=`
 <p><strong>ব্যবহার:</strong> ${product.usage||"প্রযোজ্য নয়"}</p>
 </div>
 
-<h3>ডিজাইনের ছবিগুলো</h3>
+<h3>ডিজাইনের ছবি</h3>
 <div class="detail-gallery">${gallery}</div>
 
 <button class="order" onclick="orderNow(products.find(p=>p.id==='${product.id}'))">

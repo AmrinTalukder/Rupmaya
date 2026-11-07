@@ -3,134 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>রূপমায়া | Ladies & Kids Collection</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#fff9fc;
-  color:#49313b;
-}
-
-/* =========================
-   PREMIUM PINK GOLD COLORS
-========================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#fff9fc;color:#49313b}
 
 :root{
-  --pink:#d83b83;
-  --dark-pink:#a51e5d;
-  --maroon:#78163f;
-  --gold:#d6ad60;
-  --light-pink:#fce5ed;
-  --soft-pink:#fff5f9;
+  --pink:#d83b83;--dark-pink:#a51e5d;--maroon:#78163f;
+  --gold:#d6ad60;--light-pink:#fce5ed;--soft-pink:#fff5f9;
   --rm-nav-height:0px;
 }
 
-/* =========================
-   TOP BREAKING NEWS BANNER
-========================= */
-
+/* TOP BREAKING NEWS BANNER */
 .rm-news{
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  background:linear-gradient(
-    120deg,
-    #78163f,
-    #a51e5d,
-    #d83b83,
-    #78163f
-  );
-  color:white;
-  border-top:3px solid var(--gold);
-  border-bottom:3px solid var(--gold);
-  padding:11px 0;
+  width:100%;overflow:hidden;position:relative;
+  background:linear-gradient(120deg,#78163f,#a51e5d,#d83b83,#78163f);
+  color:white;border-top:3px solid var(--gold);
+  border-bottom:3px solid var(--gold);padding:11px 0;
 }
-
 .rm-news.is-fixed{
-  position:fixed;
-  top:var(--rm-nav-height);
-  left:0;
-  width:100%;
-  z-index:999;
+  position:fixed;top:var(--rm-nav-height);
+  left:0;width:100%;z-index:999;
 }
-
 .rm-news-track{
-  display:flex;
-  width:max-content;
+  display:flex;width:max-content;
   animation:rmNewsMove 24s linear infinite;
 }
-
 .rm-news-track span{
-  display:inline-block;
-  padding-right:65px;
-  font-size:15px;
-  font-weight:bold;
-  letter-spacing:.4px;
-  white-space:nowrap;
+  display:inline-block;padding-right:65px;
+  font-size:15px;font-weight:bold;
+  letter-spacing:.4px;white-space:nowrap;
 }
-
 @keyframes rmNewsMove{
   from{transform:translateX(0)}
   to{transform:translateX(-50%)}
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 header{
-  width:100%;
-  background:#fce5ed;
-  text-align:center;
+  width:100%;background:#fce5ed;
+  text-align:center;overflow:hidden;
 }
-
-.logo{
-  width:95px;
-  height:auto;
-  margin:12px auto 0;
-}
-
-.banner{
-  display:block;
-  width:100%;
-  height:auto;
-  margin:0 auto;
-}
-
-header{
-  overflow:hidden;
-}
+.logo{width:95px;height:auto;margin:12px auto 0}
+.banner{display:block;width:100%;height:auto;margin:0 auto}
 
 @keyframes bannerLoop{
-  from{transform:translateX(100%);}
-  to{transform:translateX(-100%);}
+  from{transform:translateX(100%)}
+  to{transform:translateX(-100%)}
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION - GOLDEN MENU */
 nav{
-  background:linear-gradient(
-    110deg,
-    #f8d5e4,
-    #fce9ef,
-    #f8d5e4
-  );
+  background:#5B1235 !important;
   padding:13px 8px;
   text-align:center;
-  border-bottom:2px solid var(--gold);
+  border-bottom:3px solid #E8C77D;
   position:sticky;
   top:0;
   z-index:1000;
@@ -139,723 +68,337 @@ nav{
 
 nav a{
   display:inline-block;
-  color:#842b50;
+  color:#FFF8F3 !important;
   text-decoration:none;
-  margin:5px 9px;
+  border:2px solid #D4AF37;
+  padding:12px 18px;
+  border-radius:8px;
+  margin:5px 6px;
   font-weight:bold;
   font-size:14px;
-  transition:.2s;
+  transition:all .3s ease;
 }
 
+/* MOUSE HOVER GOLDEN EFFECT */
 nav a:hover{
-  color:#bd8b37;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  text-align:center;
-  padding:45px 15px;
   background:linear-gradient(
-    135deg,
-    #fff0f5,
-    #fff8e9,
-    #fce5ed
-  );
+    135deg,#FFF2A8,#D4AF37,#FFDF75
+  ) !important;
+  color:#4B071D !important;
+  border-color:#FFE08A;
+  box-shadow:0 0 15px #FFD700;
+  transform:translateY(-3px);
 }
 
-.hero h2{
-  color:#8c3156;
-  font-size:27px;
+/* ACTIVE MENU */
+nav a.active{
+  background:#D4AF37 !important;
+  color:#4B071D !important;
+  border-color:#FFE08A;
+  box-shadow:0 0 12px #D4AF37;
 }
 
-.hero p{
-  line-height:1.9;
-  font-size:16px;
+/* HERO */
+.hero{
+  text-align:center;padding:45px 15px;
+  background:linear-gradient(135deg,#fff0f5,#fff8e9,#fce5ed);
 }
+.hero h2{color:#8c3156;font-size:27px}
+.hero p{line-height:1.9;font-size:16px}
 
-/* =========================
-   SECTION TITLES
-========================= */
-
+/* SECTION TITLES */
 .section-title{
-  text-align:center;
-  color:#8c3156;
-  margin:35px 0 22px;
-  font-size:25px;
+  text-align:center;color:#8c3156;
+  margin:35px 0 22px;font-size:25px;
+  animation:rmTitleIn .7s ease both;
 }
-
 .section-title:after{
-  content:"";
-  display:block;
-  width:75px;
-  height:3px;
-  background:var(--gold);
-  margin:10px auto;
-  border-radius:5px;
+  content:"";display:block;width:75px;height:3px;
+  background:var(--gold);margin:10px auto;border-radius:5px;
+}
+@keyframes rmTitleIn{
+  from{opacity:0;transform:translateY(15px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
 
-/* =========================
-   CATEGORY IMAGE CARDS
-========================= */
-
+/* CATEGORY IMAGE CARDS */
 .categories{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-  padding:0 20px 35px;
-  max-width:1250px;
-  margin:auto;
+  gap:20px;padding:0 20px 35px;
+  max-width:1250px;margin:auto;
 }
-
 .category-card{
-  background:white;
-  border:1px solid #efd6df;
-  border-radius:17px;
-  overflow:hidden;
-  text-align:center;
-  color:#842b50;
-  cursor:pointer;
+  background:white;border:1px solid #efd6df;
+  border-radius:17px;overflow:hidden;text-align:center;
+  color:#842b50;cursor:pointer;
   box-shadow:0 5px 18px #64284115;
-  transition:
-    transform .45s cubic-bezier(.2,.8,.2,1),
-    box-shadow .45s ease,
-    border-color .3s ease;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),
+  box-shadow .45s ease,border-color .3s ease;
   transform-style:preserve-3d;
 }
-
 .category-card:hover{
-  transform:
-    perspective(1000px)
-    translateY(-8px)
-    rotateX(3deg)
-    rotateY(-3deg)
-    scale(1.02);
+  transform:perspective(1000px) translateY(-8px)
+  rotateX(3deg) rotateY(-3deg) scale(1.02);
   border-color:var(--gold);
-  box-shadow:
-    0 15px 30px rgba(120,22,63,.20),
-    0 5px 12px rgba(214,173,96,.18);
+  box-shadow:0 15px 30px rgba(120,22,63,.20),
+  0 5px 12px rgba(214,173,96,.18);
 }
-
 .category-card img{
-  display:block;
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  transition:transform .6s ease;
+  display:block;width:100%;height:230px;
+  object-fit:cover;transition:transform .6s ease;
 }
-
-.category-card:hover img{
-  transform:scale(1.07);
-}
-
+.category-card:hover img{transform:scale(1.07)}
 .category-card h3{
-  font-size:21px;
-  margin:13px 5px 16px;
-  color:#842b50;
+  font-size:21px;margin:13px 5px 16px;color:#842b50;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
-
+/* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-  padding:0 15px 35px;
-  max-width:1150px;
-  margin:auto;
+  gap:18px;padding:0 15px 35px;
+  max-width:1150px;margin:auto;
 }
-
 .card{
-  background:white;
-  border:1px solid #efd6df;
-  border-radius:14px;
-  overflow:hidden;
-  text-align:center;
-  padding-bottom:17px;
-  box-shadow:0 4px 14px #64284112;
-  transition:
-    transform .4s cubic-bezier(.2,.8,.2,1),
-    box-shadow .4s ease;
+  background:white;border:1px solid #efd6df;
+  border-radius:14px;overflow:hidden;text-align:center;
+  padding-bottom:17px;box-shadow:0 4px 14px #64284112;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),
+  box-shadow .4s ease;
   transform-style:preserve-3d;
 }
-
 .card:hover{
-  transform:
-    perspective(1000px)
-    translateY(-7px)
-    rotateX(2deg)
-    rotateY(-2deg);
-  box-shadow:
-    0 14px 28px rgba(120,22,63,.18),
-    0 4px 10px rgba(214,173,96,.12);
+  transform:perspective(1000px) translateY(-7px)
+  rotateX(2deg) rotateY(-2deg);
+  box-shadow:0 14px 28px rgba(120,22,63,.18),
+  0 4px 10px rgba(214,173,96,.12);
 }
-
 .card img{
-  width:100%;
-  height:270px;
-  object-fit:cover;
-  display:block;
-  cursor:pointer;
-  background:#fce5ed;
+  width:100%;height:270px;object-fit:cover;
+  display:block;cursor:pointer;background:#fce5ed;
   transition:transform .55s ease;
 }
-
-.card:hover img{
-  transform:scale(1.045);
-}
-
-.card h3{
-  font-size:17px;
-  margin:13px 4px 7px;
-  color:#692744;
-}
-
-.card p{
-  margin:7px 0;
-  font-size:14px;
-}
-
+.card:hover img{transform:scale(1.045)}
+.card h3{font-size:17px;margin:13px 4px 7px;color:#692744}
+.card p{margin:7px 0;font-size:14px}
 .price{
-  color:#a02d65;
-  font-weight:bold;
-  font-size:19px!important;
-  margin:10px 0!important;
+  color:#a02d65;font-weight:bold;
+  font-size:19px!important;margin:10px 0!important;
 }
-
 .old-price{
-  color:#888;
-  text-decoration:line-through;
-  font-size:15px;
-  margin-right:7px;
+  text-decoration:line-through;color:#999;
+  font-size:15px;margin-right:7px;
 }
-
-.offer-price{
-  color:#a02d65;
-  font-weight:bold;
-  font-size:21px;
-}
-
+.offer-price{color:#c2185b;font-size:23px;font-weight:bold}
 .discount-badge{
-  display:inline-block;
-  background:#a02d65;
-  color:white;
-  padding:5px 11px;
-  border-radius:6px;
-  font-size:13px;
-  margin:5px;
+  display:inline-block;background:#a02d65;color:white;
+  padding:5px 11px;border-radius:6px;font-size:13px;margin:5px;
 }
-
-.small{
-  font-size:12px;
-  color:#806b74;
+.discount{
+  display:inline-block;background:#c2185b;color:white;
+  padding:5px 12px;border-radius:5px;
+  font-size:13px;font-weight:bold;
 }
+.saving{color:#80652b;font-size:13px;font-weight:bold}
+.small{font-size:12px;color:#806b74}
 
-/* =========================
-   PREMIUM PINK GOLD BUTTONS
-========================= */
-
-.order,
-.view-btn,
-.back-btn{
-  display:inline-block;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(
-    135deg,
-    #d83b83 0%,
-    #a51e5d 45%,
-    #78163f 100%
-  );
-  color:#ffffff;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:11px;
-  font-size:14px;
-  font-weight:bold;
-  border:2px solid #e8c36e;
-  cursor:pointer;
-  margin:5px;
-  box-shadow:
-    0 5px 10px rgba(120,22,63,.22),
-    inset 0 1px 2px rgba(255,255,255,.3);
+/* PREMIUM PINK GOLD BUTTONS */
+.order,.view-btn,.back-btn{
+  display:inline-block;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#d83b83 0%,#a51e5d 45%,#78163f 100%);
+  color:#fff;padding:12px 20px;text-decoration:none;
+  border-radius:11px;font-size:14px;font-weight:bold;
+  border:2px solid #e8c36e;cursor:pointer;margin:5px;
+  box-shadow:0 5px 10px rgba(120,22,63,.22),
+  inset 0 1px 2px rgba(255,255,255,.3);
   transition:.25s;
 }
-
-.order::after,
-.view-btn::after,
-.back-btn::after{
-  content:"";
-  position:absolute;
-  top:-50%;
-  left:-75%;
-  width:45%;
-  height:200%;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.35),
-    transparent
-  );
+.order::after,.view-btn::after,.back-btn::after{
+  content:"";position:absolute;top:-50%;left:-75%;
+  width:45%;height:200%;
+  background:linear-gradient(90deg,transparent,
+  rgba(255,255,255,.35),transparent);
   transform:rotate(25deg);
-  transition:left .7s ease;
-  pointer-events:none;
+  transition:left .7s ease;pointer-events:none;
 }
-
-.order:hover::after,
-.view-btn:hover::after,
-.back-btn:hover::after{
+.order:hover::after,.view-btn:hover::after,.back-btn:hover::after{
   left:140%;
 }
-
-.order:hover,
-.view-btn:hover,
-.back-btn:hover{
-  background:linear-gradient(
-    135deg,
-    #f04b96,
-    #a51e5d,
-    #641336
-  );
+.order:hover,.view-btn:hover,.back-btn:hover{
+  background:linear-gradient(135deg,#f04b96,#a51e5d,#641336);
   transform:translateY(-2px);
   box-shadow:0 7px 15px rgba(120,22,63,.28);
 }
-
-.order:active,
-.view-btn:active,
-.back-btn:active{
+.order:active,.view-btn:active,.back-btn:active{
   transform:scale(.97);
 }
 
-/* =========================
-   DETAILS PAGE
-========================= */
-
-.details{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
+/* DETAILS PAGE */
+.details{max-width:1100px;margin:auto;padding:20px}
 .detail-box{
-  background:white;
-  border:1px solid #efd6df;
-  border-radius:15px;
-  padding:22px;
+  background:white;border:1px solid #efd6df;
+  border-radius:15px;padding:22px;
   box-shadow:0 4px 16px #64284112;
   animation:rmDetailIn .55s ease both;
 }
-
 @keyframes rmDetailIn{
-  from{
-    opacity:0;
-    transform:translateY(18px) scale(.985);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-  }
+  from{opacity:0;transform:translateY(18px) scale(.985)}
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
-
-.detail-box h3{
-  color:#842b50;
-  margin-top:25px;
-}
-
+.detail-box h3{color:#842b50;margin-top:25px}
 .detail-gallery{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:15px;
-  margin:20px 0;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;margin:20px 0;
 }
-
 .detail-gallery img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  border-radius:12px;
-  background:#fce5ed;
+  width:100%;height:320px;object-fit:cover;
+  border-radius:12px;background:#fce5ed;
   border:1px solid #efd6df;
-  transition:
-    transform .4s ease,
-    box-shadow .4s ease;
+  transition:transform .4s ease,box-shadow .4s ease;
 }
-
 .detail-gallery img:hover{
   transform:scale(1.035);
   box-shadow:0 9px 20px rgba(120,22,63,.18);
 }
+.description{line-height:1.9;font-size:16px}
 
-.description{
-  line-height:1.9;
-  font-size:16px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
+/* CONTACT */
 .contact{
-  background:linear-gradient(
-    135deg,
-    #f9e1eb,
-    #fff3e0,
-    #f8c8dc
-  );
-  text-align:center;
-  padding:35px 12px;
-  line-height:2;
-  border-top:2px solid var(--gold);
+  background:linear-gradient(135deg,#f9e1eb,#fff3e0,#f8c8dc);
+  text-align:center;padding:35px 12px;
+  line-height:2;border-top:2px solid var(--gold);
 }
-
-.contact h2{
-  color:#842b50;
-}
-
+.contact h2{color:#842b50}
 .social-links{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:15px;
+  display:flex;justify-content:center;
+  flex-wrap:wrap;gap:15px;margin-top:15px;
 }
-
 .social-links a{
-  color:#842b50;
-  font-weight:bold;
-  text-decoration:none;
-  padding:8px 15px;
-  border:1px solid var(--gold);
-  border-radius:8px;
-  background:white;
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease,
-    background .3s ease;
+  color:#842b50;font-weight:bold;text-decoration:none;
+  padding:8px 15px;border:1px solid var(--gold);
+  border-radius:8px;background:white;
+  transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
 }
-
 .social-links a:hover{
-  background:#842b50;
-  color:white;
+  background:#842b50;color:white;
   transform:translateY(-4px);
   box-shadow:0 7px 15px rgba(120,22,63,.16);
 }
 
-/* =========================
-   PREMIUM PINK GOLD FOOTER
-========================= */
-
+/* FOOTER */
 footer{
-  position:relative;
-  overflow:hidden;
-  text-align:center;
+  position:relative;overflow:hidden;text-align:center;
   padding:35px 15px;
-  background:linear-gradient(
-    120deg,
-    #f8c8dc 0%,
-    #d94f91 35%,
-    #a51e5d 70%,
-    #f3d58a 100%
-  );
+  background:linear-gradient(120deg,#f8c8dc 0%,#d94f91 35%,#a51e5d 70%,#f3d58a 100%);
   background-size:200% 200%;
   animation:rmFooterShimmer 9s ease infinite;
-  color:#ffffff;
-  border-top:3px solid #e8c36e;
-  box-shadow:
-    0 -5px 20px rgba(165,30,93,.15),
-    inset 0 2px 10px rgba(255,255,255,.25);
+  color:#fff;border-top:3px solid #e8c36e;
+  box-shadow:0 -5px 20px rgba(165,30,93,.15),
+  inset 0 2px 10px rgba(255,255,255,.25);
   line-height:1.9;
 }
-
 @keyframes rmFooterShimmer{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
-
 footer strong{
-  font-size:23px;
-  color:white;
+  font-size:23px;color:white;
   text-shadow:0 2px 5px #78163f50;
 }
 
-/* =========================
-   HIDDEN PAGE
-========================= */
+/* HIDDEN PAGE */
+.hidden{display:none!important}
 
-.hidden{
-  display:none!important;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
+/* MOBILE RESPONSIVE */
 @media(max-width:650px){
-
   .categories{
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-    padding:0 12px 25px;
+    gap:12px;padding:0 12px 25px;
   }
-
-  .category-card img{
-    height:160px;
-  }
-
-  .category-card h3{
-    font-size:15px;
-    margin:10px 3px 13px;
-  }
-
+  .category-card img{height:160px}
+  .category-card h3{font-size:15px;margin:10px 3px 13px}
   .products{
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-    padding:0 10px 25px;
+    gap:10px;padding:0 10px 25px;
   }
-
-  .card img{
-    height:190px;
-  }
-
-  .card h3{
-    font-size:14px;
-  }
-
-  .card p{
-    font-size:12px;
-  }
-
-  .order,
-  .view-btn,
-  .back-btn{
-    padding:10px 12px;
-    font-size:12px;
-  }
-
+  .card img{height:190px}
+  .card h3{font-size:14px}
+  .card p{font-size:12px}
+  .order,.view-btn,.back-btn{padding:10px 12px;font-size:12px}
   .detail-gallery{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;
   }
-
-  .detail-gallery img{
-    height:190px;
-  }
-
-  nav{
-    padding:8px 4px;
-  }
-
-  nav a{
-    font-size:12px;
-    margin:5px 6px;
-  }
-
-  .hero h2{
-    font-size:23px;
-  }
-
-  .section-title{
-    font-size:22px;
-  }
-
-  .rm-news-track span{
-    font-size:13px;
-  }
-
-  .details{
-    padding:12px;
-  }
-
-  .detail-box{
-    padding:14px;
-  }
-
-  .category-card:hover{
-    transform:translateY(-4px) scale(1.01);
-  }
-
-  .card:hover{
-    transform:translateY(-3px);
-  }
-
-  .detail-gallery img:hover{
-    transform:scale(1.02);
-  }
+  .detail-gallery img{height:190px}
+  nav{padding:8px 4px}
+  nav a{padding:10px 12px;font-size:12px;margin:5px 4px}
+  .hero h2{font-size:23px}
+  .section-title{font-size:22px}
+  .rm-news-track span{font-size:13px}
+  .details{padding:12px}
+  .detail-box{padding:14px}
+  .category-card:hover{transform:translateY(-4px) scale(1.01)}
+  .card:hover{transform:translateY(-3px)}
+  .detail-gallery img:hover{transform:scale(1.02)}
 }
-
 @media(max-width:360px){
-
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .category-card img{
-    height:140px;
-  }
+  .products{grid-template-columns:1fr}
+  .category-card img{height:140px}
 }
 
 /* HERO ENTRANCE ANIMATION */
-
-.hero h2,
-.hero p,
-.hero .order{
-  animation:rmFadeUp .8s ease both;
-}
-
-.hero p{
-  animation-delay:.15s;
-}
-
-.hero .order{
-  animation-delay:.3s;
-}
-
+.hero h2,.hero p,.hero .order{animation:rmFadeUp .8s ease both}
+.hero p{animation-delay:.15s}
+.hero .order{animation-delay:.3s}
 @keyframes rmFadeUp{
-  from{
-    opacity:0;
-    transform:translateY(22px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-/* SECTION TITLE ANIMATION */
-
-.section-title{
-  animation:rmTitleIn .7s ease both;
-}
-
-@keyframes rmTitleIn{
-  from{
-    opacity:0;
-    transform:translateY(15px) scale(.97);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-  }
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 /* REDUCE ANIMATION WHEN REQUESTED */
-
 @media(prefers-reduced-motion:reduce){
-
-  *,
-  *::before,
-  *::after{
+  *,*::before,*::after{
     scroll-behavior:auto!important;
     animation-duration:.01ms!important;
     transition-duration:.01ms!important;
   }
 }
-
-nav {
-  background: #5B1235 !important;
-  border-bottom: 3px solid #E8C77D;
-}
-
-nav a {
-  color: #FFF8F3 !important;
-}
-
-nav a {
-  color: #FFF8F3 !important;
-}
-
-/* নতুন CSS এখান থেকে বসাবে */
-
-.old-price {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 15px;
-}
-
-.offer-price {
-    color: #c2185b;
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.discount {
-    display: inline-block;
-    background: #c2185b;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.saving {
-    color: #80652b;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-</style>
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     TOP RUNNING ADVERTISEMENT
-========================= -->
-
+<!-- TOP RUNNING ADVERTISEMENT -->
 <div class="rm-news">
-
   <div class="rm-news-track">
-
     <span>
       ✨ রূপমায়ার নতুন কালেকশন এসেছে!
       💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি
       ✨ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
       💗 Ladies & Kids Collection
     </span>
-
     <span>
       ✨ রূপমায়ার নতুন কালেকশন এসেছে!
       💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি
       ✨ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
       💗 Ladies & Kids Collection
     </span>
-
   </div>
-
 </div>
 
-<!-- =========================
-     HEADER
-========================= -->
-
+<!-- HEADER -->
 <header>
+  <img class="logo" src="./rupmaya-logo.png"
+       alt="রূপমায়া লোগো"
+       onerror="this.style.display='none'">
 
-  <img
-    class="logo"
-    src="./rupmaya-logo.png"
-    alt="রূপমায়া লোগো"
-    onerror="this.style.display='none'">
-
-  <img
-    class="banner"
-    src="./rupmaya-banner.png"
-    alt="রূপমায়া Ladies & Kids Collection">
-
+  <img class="banner" src="./rupmaya-banner.png"
+       alt="রূপমায়া Ladies & Kids Collection">
 </header>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
-
+<!-- NAVIGATION -->
 <nav>
-
   <a href="#" onclick="showHome();return false;">Home</a>
 
   <a href="#" onclick="showCategory('borka');return false;">
@@ -879,34 +422,25 @@ nav a {
   </a>
 
   <a href="#" onclick="showCategory('kurti');return false;">
-   Kurti
+    Kurti
   </a>
 
   <a href="#" onclick="showContact();return false;">
     Contact
   </a>
-
 </nav>
 
-<!-- =========================
-     HOME PAGE
-========================= -->
-
+<!-- HOME PAGE -->
 <main id="homePage">
-
   <section class="hero">
-
     <h2>স্বাগতম রূপমায়া'য় 🤍</h2>
-
     <p>
       যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
       আপনার পছন্দের পোশাক বেছে নিন।
     </p>
-
     <a class="order" href="#collections">
       আমাদের কালেকশন দেখুন
     </a>
-
   </section>
 
   <h2 class="section-title" id="collections">
@@ -914,204 +448,101 @@ nav a {
   </h2>
 
   <!-- CATEGORY IMAGE CARDS -->
-
   <div class="categories">
-
-    <div
-      class="category-card"
-      onclick="showCategory('borka')">
-
-      <img
-        src="./Images/01-borka.jpg"
-        alt="বোরকা কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('borka')">
+      <img src="./Images/01-borka.jpg"
+           alt="বোরকা কালেকশন" loading="lazy">
       <h3>বোরকা কালেকশন</h3>
-
     </div>
 
-    <div
-      class="category-card"
-      onclick="showCategory('threepiece')">
-
-      <img
-        src="./Images/02-threepiece.jpg"
-        alt="থ্রি-পিস কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('threepiece')">
+      <img src="./Images/02-threepiece.jpg"
+           alt="থ্রি-পিস কালেকশন" loading="lazy">
       <h3>থ্রি-পিস কালেকশন</h3>
-
     </div>
 
-    <!-- SAREE CATEGORY CARD -->
-
-    <div
-      class="category-card"
-      onclick="showCategory('saree')">
-
-      <img
-        src="./Images/04-saree.jpg"
-        alt="শাড়ি কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('saree')">
+      <img src="./Images/04-saree.jpg"
+           alt="শাড়ি কালেকশন" loading="lazy">
       <h3>শাড়ি কালেকশন</h3>
-
     </div>
 
-    <div
-      class="category-card"
-      onclick="showCategory('kids')">
-
-      <img
-        src="./Images/04-kids.jpg"
-        alt="বাচ্চাদের কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('kids')">
+      <img src="./Images/04-kids.jpg"
+           alt="বাচ্চাদের কালেকশন" loading="lazy">
       <h3>বাচ্চাদের কালেকশন</h3>
-
     </div>
 
-    <div
-      class="category-card"
-      onclick="showCategory('tops')">
-
-      <img
-        src="./Images/05-tops.jpg"
-        alt="টপস কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('tops')">
+      <img src="./Images/05-tops.jpg"
+           alt="টপস কালেকশন" loading="lazy">
       <h3>টপস কালেকশন</h3>
-
     </div>
 
-    <div
-      class="category-card"
-      onclick="showCategory('kurti')">
-
-      <img
-        src="./Images/06-kurti.jpg"
-        alt="কুর্তি কালেকশন"
-        loading="lazy">
-
+    <div class="category-card" onclick="showCategory('kurti')">
+      <img src="./Images/06-kurti.jpg"
+           alt="কুর্তি কালেকশন" loading="lazy">
       <h3>কুর্তি কালেকশন</h3>
-
     </div>
-
   </div>
-
 </main>
 
-<!-- =========================
-     CATEGORY PAGE
-========================= -->
-
+<!-- CATEGORY PAGE -->
 <section id="categoryPage" class="hidden">
-
   <div class="container">
-
     <h2 class="section-title" id="categoryTitle"></h2>
-
     <div class="products" id="productList"></div>
-
   </div>
-
 </section>
 
-<!-- =========================
-     PRODUCT DETAILS PAGE
-========================= -->
-
+<!-- PRODUCT DETAILS PAGE -->
 <section id="detailPage" class="hidden">
-
   <div class="details">
-
     <div id="productDetails"></div>
-
   </div>
-
 </section>
 
-<!-- =========================
-     CONTACT PAGE
-========================= -->
-
+<!-- CONTACT PAGE -->
 <section id="contactPage" class="hidden">
-
   <div class="contact">
-
     <h2>অর্ডার ও যোগাযোগ</h2>
-
     <p>📍 বগুড়া, বাংলাদেশ</p>
-
     <p>📞 01343953665</p>
-
     <p>🚚 সারা বাংলাদেশে কুরিয়ার ডেলিভারি</p>
 
-    <a
-      class="order"
-      href="https://wa.me/8801343953665"
-      target="_blank"
-      rel="noopener noreferrer">
-
+    <a class="order"
+       href="https://wa.me/8801343953665"
+       target="_blank"
+       rel="noopener noreferrer">
       WhatsApp-এ যোগাযোগ করুন
-
     </a>
 
     <p><strong>আমাদের সোশ্যাল মিডিয়া</strong></p>
 
     <div class="social-links">
+      <a href="https://www.facebook.com/rupmaya.bd.collection/"
+         target="_blank" rel="noopener noreferrer">Facebook</a>
 
-      <a
-        href="https://www.facebook.com/rupmaya.bd.collection/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Facebook
-      </a>
+      <a href="https://www.instagram.com/rupmaya.bd.collection/"
+         target="_blank" rel="noopener noreferrer">Instagram</a>
 
-      <a
-        href="https://www.instagram.com/rupmaya.bd.collection/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Instagram
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@rupmaya.bd.collection"
-        target="_blank"
-        rel="noopener noreferrer">
-        TikTok
-      </a>
-
+      <a href="https://www.tiktok.com/@rupmaya.bd.collection"
+         target="_blank" rel="noopener noreferrer">TikTok</a>
     </div>
-
   </div>
-
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
-
   <strong>রূপমায়া</strong><br>
-
   যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
-
   © 2026 Rupmaya Ladies &amp; Kids Collection
-
 </footer>
 
 <script>
 
-/* ===================================
-   PRODUCT DATABASE
-=================================== */
-
+/* PRODUCT DATABASE */
 const products = [
-
-  /* BORKA */
-
   {
     id:"RM001",
     category:"borka",
@@ -1123,8 +554,6 @@ const products = [
     ]
   },
 
-  /* SAREE */
-
   {
     id:"RM002",
     category:"saree",
@@ -1132,9 +561,7 @@ const products = [
     price:2100,
     discount:15,
     description:"আকর্ষণীয় ডিজাইনের প্রিমিয়াম শাড়ি।",
-    images:[
-      "./Images/02-saree.jpeg"
-    ]
+    images:["./Images/02-saree.jpeg"]
   },
 
   {
@@ -1144,12 +571,8 @@ const products = [
     price:2100,
     discount:15,
     description:"সুন্দর ডিজাইনের প্রিমিয়াম শাড়ি।",
-    images:[
-      "./Images/03-saree.jpeg"
-    ]
+    images:["./Images/03-saree.jpeg"]
   },
-
-  /* KURTI */
 
   {
     id:"RM004",
@@ -1162,8 +585,6 @@ const products = [
     ]
   },
 
-  /* TOPS */
-
   {
     id:"RM005",
     category:"tops",
@@ -1174,8 +595,6 @@ const products = [
       "https://placehold.co/600x750/f6e4e7/42162f?text=Tops"
     ]
   },
-
-  /* KIDS RM007 */
 
   {
     id:"RM007",
@@ -1190,8 +609,6 @@ const products = [
     ]
   },
 
-  /* KIDS RM008 */
-
   {
     id:"RM008",
     category:"kids",
@@ -1199,12 +616,8 @@ const products = [
     price:899,
     discount:15,
     description:"আকর্ষণীয় ব্রাউন ফ্লোরাল প্রিন্টের বাচ্চাদের পোশাক।",
-    images:[
-      "./Images/kids-rm008-1.jpg"
-    ]
+    images:["./Images/kids-rm008-1.jpg"]
   },
-
-  /* KIDS RM009 */
 
   {
     id:"RM009",
@@ -1213,12 +626,8 @@ const products = [
     price:899,
     discount:15,
     description:"সুন্দর হালকা সবুজ ফ্লোরাল প্রিন্টের বাচ্চাদের পোশাক।",
-    images:[
-      "./Images/kids-rm009-1.jpg"
-    ]
+    images:["./Images/kids-rm009-1.jpg"]
   },
-
-  /* THREEPIECE RM010 - RM013 */
 
   {
     id:"RM010",
@@ -1227,9 +636,7 @@ const products = [
     price:1400,
     discount:15,
     description:"আকর্ষণীয় ডিজাইনের প্রিমিয়াম থ্রি-পিস।",
-    images:[
-      "./Images/threepiece-rm010-1.jpeg"
-    ]
+    images:["./Images/threepiece-rm010-1.jpeg"]
   },
 
   {
@@ -1239,9 +646,7 @@ const products = [
     price:1400,
     discount:15,
     description:"সুন্দর ডিজাইনের প্রিমিয়াম থ্রি-পিস।",
-    images:[
-      "./Images/threepiece-rm010-2.jpeg"
-    ]
+    images:["./Images/threepiece-rm010-2.jpeg"]
   },
 
   {
@@ -1251,9 +656,7 @@ const products = [
     price:1400,
     discount:15,
     description:"আকর্ষণীয় কালেকশনের প্রিমিয়াম থ্রি-পিস।",
-    images:[
-      "./Images/threepiece-rm010-3.jpeg"
-    ]
+    images:["./Images/threepiece-rm010-3.jpeg"]
   },
 
   {
@@ -1263,99 +666,56 @@ const products = [
     price:1400,
     discount:15,
     description:"নতুন ডিজাইনের প্রিমিয়াম থ্রি-পিস।",
-    images:[
-      "./Images/threepiece-rm010-4.jpeg"
-    ]
+    images:["./Images/threepiece-rm010-4.jpeg"]
   }
-
 ];
 
-
-/* ===================================
-   CATEGORY NAMES
-=================================== */
-
+/* CATEGORY NAMES */
 const categoryNames = {
-
   borka:"বোরকা কালেকশন",
-
   threepiece:"থ্রি-পিস কালেকশন",
-
   saree:"শাড়ি কালেকশন",
-
   kids:"বাচ্চাদের পোশাক কালেকশন",
-
   tops:"টপস কালেকশন",
-
   kurti:"কুর্তি কালেকশন"
-
 };
 
 let currentCategory = "borka";
 
-
-/* ===================================
-   OFFER PRICE CALCULATION
-=================================== */
-
+/* OFFER PRICE CALCULATION */
 function getOfferPrice(product){
-
   return product.discount
-
     ? Math.round(
         product.price * (100-product.discount) / 100
       )
-
     : product.price;
-
 }
 
-
-/* ===================================
-   PRICE DISPLAY
-=================================== */
-
+/* PRICE DISPLAY */
 function priceMarkup(product){
-
   if(product.discount){
-
     return `
-
       <span class="old-price">
-
         ৳ ${product.price.toLocaleString("en-US")}
-
       </span>
 
       <span class="offer-price">
-
         ৳ ${getOfferPrice(product).toLocaleString("en-US")}
-
       </span>
 
       <br>
 
       <span class="discount-badge">
-
         ${product.discount}% OFF
-
       </span>
-
     `;
-
   }
 
   return `৳ ${product.price.toLocaleString("en-US")}`;
-
 }
 
-
-/* ===================================
-   PAGE CONTROL
-=================================== */
-
+/* PAGE CONTROL */
 function hideAllPages(){
-
   document.getElementById("homePage")
     .classList.add("hidden");
 
@@ -1367,32 +727,20 @@ function hideAllPages(){
 
   document.getElementById("contactPage")
     .classList.add("hidden");
-
 }
 
-
-/* ===================================
-   SHOW HOME
-=================================== */
-
+/* SHOW HOME */
 function showHome(){
-
   hideAllPages();
 
   document.getElementById("homePage")
     .classList.remove("hidden");
 
   window.scrollTo(0,0);
-
 }
 
-
-/* ===================================
-   SHOW CATEGORY
-=================================== */
-
+/* SHOW CATEGORY */
 function showCategory(category){
-
   currentCategory = category;
 
   hideAllPages();
@@ -1401,7 +749,6 @@ function showCategory(category){
     .classList.remove("hidden");
 
   document.getElementById("categoryTitle").textContent =
-
     categoryNames[category] || "কালেকশন";
 
   const list = document.getElementById("productList");
@@ -1409,63 +756,42 @@ function showCategory(category){
   list.innerHTML = "";
 
   const filteredProducts = products.filter(
-
     product => product.category === category
-
   );
 
   if(filteredProducts.length === 0){
-
     list.innerHTML =
-
       "<p>এই কালেকশনে এখনো কোনো পণ্য যোগ করা হয়নি।</p>";
-
   }
 
   filteredProducts.forEach(product => {
-
     const card = document.createElement("div");
-
     card.className = "card";
 
     const img = document.createElement("img");
-
     img.src = product.images[0];
-
     img.alt = product.name;
-
     img.loading = "lazy";
-
     img.onclick = () => showDetails(product.id);
 
     const title = document.createElement("h3");
-
     title.textContent = product.name;
 
     const code = document.createElement("p");
-
     code.textContent = "প্রোডাক্ট কোড: " + product.id;
 
     const price = document.createElement("p");
-
     price.className = "price";
-
     price.innerHTML = priceMarkup(product);
 
     const view = document.createElement("button");
-
     view.className = "view-btn";
-
     view.textContent = "ছবি ও বিস্তারিত দেখুন";
-
     view.onclick = () => showDetails(product.id);
 
     const order = document.createElement("button");
-
     order.className = "order";
-
     order.textContent = "WhatsApp-এ অর্ডার";
-
     order.onclick = () => orderNow(product);
 
     card.append(
@@ -1478,24 +804,15 @@ function showCategory(category){
     );
 
     list.appendChild(card);
-
   });
 
   window.scrollTo(0,0);
-
 }
 
-
-/* ===================================
-   PRODUCT DETAILS
-=================================== */
-
+/* PRODUCT DETAILS */
 function showDetails(id){
-
   const product = products.find(
-
     p => p.id === id
-
   );
 
   if(!product) return;
@@ -1506,155 +823,94 @@ function showDetails(id){
     .classList.remove("hidden");
 
   const gallery = product.images.map(
-
     (image,index) => `
-
       <img
         src="${image}"
         alt="${product.name} ছবি ${index+1}"
         loading="lazy"
         onerror="this.alt='ছবিটি পাওয়া যায়নি'">
-
     `
-
   ).join("");
 
   const details = document.getElementById("productDetails");
 
   details.innerHTML = `
-
     <h2 class="section-title">
-
       ${product.name}
-
     </h2>
 
     <div class="detail-box">
-
       <p>
-
         <b>প্রোডাক্ট কোড:</b> ${product.id}
-
       </p>
 
       <p class="price">
-
         ${priceMarkup(product)}
-
       </p>
 
       <p class="description">
-
         ${product.description}
-
       </p>
 
-      <h3>
-
-        ডিজাইনের ছবিগুলো
-
-      </h3>
+      <h3>ডিজাইনের ছবিগুলো</h3>
 
       <div class="detail-gallery">
-
         ${gallery}
-
       </div>
 
       <button
-
         class="back-btn"
-
         onclick="backToCategory()">
-
         ← কালেকশনে ফিরে যান
-
       </button>
 
       <button
-
         class="order"
-
         onclick="orderNow(products.find(p=>p.id==='${product.id}'))">
-
         WhatsApp-এ অর্ডার করুন
-
       </button>
-
     </div>
-
   `;
 
   window.scrollTo(0,0);
-
 }
 
-
-/* ===================================
-   BACK TO CATEGORY
-=================================== */
-
+/* BACK TO CATEGORY */
 function backToCategory(){
-
   showCategory(currentCategory);
-
 }
 
-
-/* ===================================
-   CONTACT PAGE
-=================================== */
-
+/* CONTACT PAGE */
 function showContact(){
-
   hideAllPages();
 
   document.getElementById("contactPage")
     .classList.remove("hidden");
 
   window.scrollTo(0,0);
-
 }
 
-
-/* ===================================
-   WHATSAPP ORDER
-=================================== */
-
+/* WHATSAPP ORDER */
 function orderNow(product){
-
   if(!product) return;
 
   const phone = "8801343953665";
-
   const offerPrice = getOfferPrice(product);
 
   const message =
-
     "আসসালামু আলাইকুম, রূপমায়া।\n" +
-
     "আমি একটি পণ্য অর্ডার করতে চাই।\n" +
-
     "পণ্যের নাম: " + product.name + "\n" +
-
     "পণ্যের কোড: " + product.id + "\n" +
-
     "মূল্য: " + product.price + " টাকা\n" +
-
     "ছাড়: " + (product.discount || 0) + "%\n" +
-
     "অফার মূল্য: " + offerPrice + " টাকা\n" +
-
     "আমার নাম:\n" +
-
     "ঠিকানা:\n" +
-
     "মোবাইল নম্বর:";
 
   const url =
-
     "https://wa.me/" + phone +
-
     "?text=" + encodeURIComponent(message);
 
   window.open(
@@ -1662,29 +918,44 @@ function orderNow(product){
     "_blank",
     "noopener"
   );
-
 }
 
-
-/* ===================================
-   STICKY NAV + MOVING NEWS TICKER
-=================================== */
-
+/* ACTIVE NAVIGATION MENU */
 (function(){
+  const navLinks = document.querySelectorAll("nav a");
 
+  function setActiveMenu(clickedLink){
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+    });
+
+    clickedLink.classList.add("active");
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click",function(){
+      setActiveMenu(this);
+    });
+  });
+
+  /* প্রথমবার ওয়েবসাইট খুললে Home active থাকবে */
+  if(navLinks.length){
+    setActiveMenu(navLinks[0]);
+  }
+})();
+
+/* STICKY NAV + MOVING NEWS TICKER */
+(function(){
   const nav = document.querySelector("nav");
   const news = document.querySelector(".rm-news");
 
   if(!nav || !news) return;
 
   const spacer = document.createElement("div");
-
   spacer.style.display = "none";
-
   news.after(spacer);
 
   function updateNewsPosition(){
-
     const navHeight = nav.offsetHeight;
 
     document.documentElement.style.setProperty(
@@ -1693,27 +964,16 @@ function orderNow(product){
     );
 
     if(nav.getBoundingClientRect().top <= 0){
-
       if(!news.classList.contains("is-fixed")){
-
         spacer.style.height = news.offsetHeight + "px";
-
         spacer.style.display = "block";
-
         news.classList.add("is-fixed");
-
       }
-
     }
-
     else{
-
       news.classList.remove("is-fixed");
-
       spacer.style.display = "none";
-
     }
-
   }
 
   window.addEventListener(
@@ -1733,7 +993,6 @@ function orderNow(product){
   );
 
   updateNewsPosition();
-
 })();
 
 </script>

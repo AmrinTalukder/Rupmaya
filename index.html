@@ -33,6 +33,7 @@ body{
   --gold:#d6ad60;
   --light-pink:#fce5ed;
   --soft-pink:#fff5f9;
+  --rm-nav-height:0px;
 }
 
 /* =========================
@@ -56,10 +57,22 @@ body{
   padding:11px 0;
 }
 
+/* স্ক্রল করলে টিকার নেভিগেশনের নিচে থাকবে */
+
+.rm-news.is-fixed{
+  position:fixed;
+  top:var(--rm-nav-height);
+  left:0;
+  width:100%;
+  z-index:999;
+}
+
 .rm-news-track{
   display:flex;
   width:max-content;
-  animation:rmNewsMove 24s linear infinite;
+
+  /* বাম থেকে ডানে চলবে */
+  animation:rmNewsMove 24s linear infinite reverse;
 }
 
 .rm-news-track span{
@@ -115,7 +128,10 @@ nav{
   border-bottom:2px solid var(--gold);
   position:sticky;
   top:0;
-  z-index:100;
+
+  /* টিকারের চেয়ে বেশি z-index */
+  z-index:1000;
+
   box-shadow:0 3px 10px #78163f15;
 }
 
@@ -1518,6 +1534,97 @@ function orderNow(product){
   );
 
 }
+
+
+/* ===================================
+   STICKY NAV + MOVING NEWS TICKER
+=================================== */
+
+(function(){
+
+  const nav = document.querySelector("nav");
+  const news = document.querySelector(".rm-news");
+
+  if(!nav || !news) return;
+
+  /*
+    টিকারের আগের জায়গা ধরে রাখার জন্য
+    একটি spacer তৈরি করা হচ্ছে।
+    এতে স্ক্রল করার সময় পেজ লাফ দেবে না।
+  */
+
+  const spacer = document.createElement("div");
+
+  spacer.style.display = "none";
+
+  news.after(spacer);
+
+
+  function updateNewsPosition(){
+
+    const navHeight = nav.offsetHeight;
+
+    document.documentElement.style.setProperty(
+      "--rm-nav-height",
+      navHeight + "px"
+    );
+
+
+    /*
+      নেভিগেশন বার viewport-এর একদম উপরে
+      চলে এলে টিকার fixed হবে।
+    */
+
+    if(nav.getBoundingClientRect().top <= 0){
+
+      if(!news.classList.contains("is-fixed")){
+
+        spacer.style.height = news.offsetHeight + "px";
+
+        spacer.style.display = "block";
+
+        news.classList.add("is-fixed");
+
+      }
+
+    }
+
+    /*
+      পেজের একদম উপরে ফিরে এলে
+      টিকার আগের জায়গায় ফিরে যাবে।
+    */
+
+    else{
+
+      news.classList.remove("is-fixed");
+
+      spacer.style.display = "none";
+
+    }
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateNewsPosition,
+    {passive:true}
+  );
+
+  window.addEventListener(
+    "resize",
+    updateNewsPosition
+  );
+
+  window.addEventListener(
+    "load",
+    updateNewsPosition
+  );
+
+
+  updateNewsPosition();
+
+})();
 
 </script>
 

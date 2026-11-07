@@ -57,8 +57,6 @@ body{
   padding:11px 0;
 }
 
-/* স্ক্রল করলে টিকার নেভিগেশনের নিচে থাকবে */
-
 .rm-news.is-fixed{
   position:fixed;
   top:var(--rm-nav-height);
@@ -70,8 +68,6 @@ body{
 .rm-news-track{
   display:flex;
   width:max-content;
-
-  /* বাম থেকে ডানে চলবে */
   animation:rmNewsMove 24s linear infinite;
 }
 
@@ -121,10 +117,6 @@ header{
   to{transform:translateX(-100%);}
 }
 
-header{
-  overflow:hidden;
-}
-
 /* =========================
    NAVIGATION
 ========================= */
@@ -141,10 +133,7 @@ nav{
   border-bottom:2px solid var(--gold);
   position:sticky;
   top:0;
-
-  /* টিকারের চেয়ে বেশি z-index */
   z-index:1000;
-
   box-shadow:0 3px 10px #78163f15;
 }
 
@@ -244,9 +233,7 @@ nav a:hover{
     rotateX(3deg)
     rotateY(-3deg)
     scale(1.02);
-
   border-color:var(--gold);
-
   box-shadow:
     0 15px 30px rgba(120,22,63,.20),
     0 5px 12px rgba(214,173,96,.18);
@@ -303,7 +290,6 @@ nav a:hover{
     translateY(-7px)
     rotateX(2deg)
     rotateY(-2deg);
-
   box-shadow:
     0 14px 28px rgba(120,22,63,.18),
     0 4px 10px rgba(214,173,96,.12);
@@ -379,14 +365,12 @@ nav a:hover{
   display:inline-block;
   position:relative;
   overflow:hidden;
-
   background:linear-gradient(
     135deg,
     #d83b83 0%,
     #a51e5d 45%,
     #78163f 100%
   );
-
   color:#ffffff;
   padding:12px 20px;
   text-decoration:none;
@@ -396,15 +380,11 @@ nav a:hover{
   border:2px solid #e8c36e;
   cursor:pointer;
   margin:5px;
-
   box-shadow:
     0 5px 10px rgba(120,22,63,.22),
     inset 0 1px 2px rgba(255,255,255,.3);
-
   transition:.25s;
 }
-
-/* BUTTON SHINE ANIMATION */
 
 .order::after,
 .view-btn::after,
@@ -415,14 +395,12 @@ nav a:hover{
   left:-75%;
   width:45%;
   height:200%;
-
   background:linear-gradient(
     90deg,
     transparent,
     rgba(255,255,255,.35),
     transparent
   );
-
   transform:rotate(25deg);
   transition:left .7s ease;
   pointer-events:none;
@@ -576,7 +554,6 @@ footer{
   overflow:hidden;
   text-align:center;
   padding:35px 15px;
-
   background:linear-gradient(
     120deg,
     #f8c8dc 0%,
@@ -584,30 +561,20 @@ footer{
     #a51e5d 70%,
     #f3d58a 100%
   );
-
   background-size:200% 200%;
   animation:rmFooterShimmer 9s ease infinite;
-
   color:#ffffff;
   border-top:3px solid #e8c36e;
-
   box-shadow:
     0 -5px 20px rgba(165,30,93,.15),
     inset 0 2px 10px rgba(255,255,255,.25);
-
   line-height:1.9;
 }
 
 @keyframes rmFooterShimmer{
-  0%{
-    background-position:0% 50%;
-  }
-  50%{
-    background-position:100% 50%;
-  }
-  100%{
-    background-position:0% 50%;
-  }
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 footer strong{
@@ -788,6 +755,7 @@ footer strong{
     transition-duration:.01ms!important;
   }
 }
+
 nav {
   background: #5B1235 !important;
   border-bottom: 3px solid #E8C77D;
@@ -796,8 +764,9 @@ nav {
 nav a {
   color: #FFF8F3 !important;
 }
-  nav a {
-    color: #FFF8F3 !important;
+
+nav a {
+  color: #FFF8F3 !important;
 }
 
 /* নতুন CSS এখান থেকে বসাবে */
@@ -845,15 +814,15 @@ nav a {
   <div class="rm-news-track">
 
     <span>
-      ✨ রূপমায়ার নতুন কালেকশন এসেছে! 
-      💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি 
+      ✨ রূপমায়ার নতুন কালেকশন এসেছে!
+      💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি
       ✨ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
       💗 Ladies & Kids Collection
     </span>
 
     <span>
-      ✨ রূপমায়ার নতুন কালেকশন এসেছে! 
-      💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি 
+      ✨ রূপমায়ার নতুন কালেকশন এসেছে!
+      💗 সারা বাংলাদেশে কুরিয়ার ডেলিভারি
       ✨ পছন্দের পোশাক অর্ডার করুন ঘরে বসেই
       💗 Ladies & Kids Collection
     </span>
@@ -971,51 +940,21 @@ nav a {
         loading="lazy">
 
       <h3>থ্রি-পিস কালেকশন</h3>
-      
-<!-- SAREE COLLECTION PRODUCTS -->
-
-<div class="product-grid">
-
-    <!-- PRODUCT 02 -->
-    <div class="product-card">
-
-        <img
-            src="./Images/02-saree.jpeg"
-            alt="শাড়ি প্রোডাক্ট ০২"
-            loading="lazy">
-
-        <h3>প্রিমিয়াম শাড়ি কালেকশন</h3>
-
-        <p class="old-price">৳ ২,১০০</p>
-
-        <p class="offer-price">৳ ১,৮০০</p>
-
-        <span class="discount">15% OFF</span>
-
-        <p class="saving">সাশ্রয় ৳ ৩০০</p>
 
     </div>
 
+    <!-- SAREE CATEGORY CARD -->
 
-    <!-- PRODUCT 03 -->
-    <div class="product-card">
+    <div
+      class="category-card"
+      onclick="showCategory('saree')">
 
-        <img
-            src="./Images/03-saree.jpeg"
-            alt="শাড়ি প্রোডাক্ট ০৩"
-            loading="lazy">
+      <img
+        src="./Images/03-saree.jpeg"
+        alt="শাড়ি কালেকশন"
+        loading="lazy">
 
-        <h3>প্রিমিয়াম শাড়ি কালেকশন</h3>
-
-        <p class="old-price">৳ ২,১০০</p>
-
-        <p class="offer-price">৳ ১,৮০০</p>
-
-        <span class="discount">15% OFF</span>
-
-        <p class="saving">সাশ্রয় ৳ ৩০০</p>
-
-    </div>
+      <h3>শাড়ি কালেকশন</h3>
 
     </div>
 
@@ -1064,7 +1003,6 @@ nav a {
 
 <!-- =========================
      CATEGORY PAGE
-     এখানে ক্যাটাগরি কার্ড থাকবে না
 ========================= -->
 
 <section id="categoryPage" class="hidden">
@@ -1190,11 +1128,24 @@ const products = [
   {
     id:"RM002",
     category:"saree",
-    name:"সুন্দর শাড়ি",
-    price:1500,
-    description:"আকর্ষণীয় ডিজাইনের সুন্দর শাড়ি।",
+    name:"প্রিমিয়াম শাড়ি কালেকশন - ডিজাইন ১",
+    price:2100,
+    discount:15,
+    description:"আকর্ষণীয় ডিজাইনের প্রিমিয়াম শাড়ি।",
     images:[
-      "https://placehold.co/600x750/f6e8dc/42162f?text=Saree"
+      "./Images/02-saree.jpeg"
+    ]
+  },
+
+  {
+    id:"RM014",
+    category:"saree",
+    name:"প্রিমিয়াম শাড়ি কালেকশন - ডিজাইন ২",
+    price:2100,
+    discount:15,
+    description:"সুন্দর ডিজাইনের প্রিমিয়াম শাড়ি।",
+    images:[
+      "./Images/03-saree.jpeg"
     ]
   },
 
@@ -1223,8 +1174,6 @@ const products = [
       "https://placehold.co/600x750/f6e4e7/42162f?text=Tops"
     ]
   },
-
-  /* OLD KIDS PRODUCT */
 
   /* KIDS RM007 */
 
@@ -1269,10 +1218,7 @@ const products = [
     ]
   },
 
-  /* =================================
-     FOUR SEPARATE THREEPIECE PRODUCTS
-     RM010 - RM013
-  ================================= */
+  /* THREEPIECE RM010 - RM013 */
 
   {
     id:"RM010",
@@ -1443,7 +1389,6 @@ function showHome(){
 
 /* ===================================
    SHOW CATEGORY
-   এখানে শুধু নির্বাচিত ক্যাটাগরি দেখাবে
 =================================== */
 
 function showCategory(category){
@@ -1483,9 +1428,6 @@ function showCategory(category){
 
     card.className = "card";
 
-
-    /* PRODUCT IMAGE */
-
     const img = document.createElement("img");
 
     img.src = product.images[0];
@@ -1496,31 +1438,19 @@ function showCategory(category){
 
     img.onclick = () => showDetails(product.id);
 
-
-    /* PRODUCT NAME */
-
     const title = document.createElement("h3");
 
     title.textContent = product.name;
 
-
-    /* PRODUCT CODE */
-
     const code = document.createElement("p");
 
     code.textContent = "প্রোডাক্ট কোড: " + product.id;
-
-
-    /* PRICE */
 
     const price = document.createElement("p");
 
     price.className = "price";
 
     price.innerHTML = priceMarkup(product);
-
-
-    /* DETAILS BUTTON */
 
     const view = document.createElement("button");
 
@@ -1530,9 +1460,6 @@ function showCategory(category){
 
     view.onclick = () => showDetails(product.id);
 
-
-    /* WHATSAPP ORDER BUTTON */
-
     const order = document.createElement("button");
 
     order.className = "order";
@@ -1541,21 +1468,13 @@ function showCategory(category){
 
     order.onclick = () => orderNow(product);
 
-
     card.append(
-
       img,
-
       title,
-
       code,
-
       price,
-
       view,
-
       order
-
     );
 
     list.appendChild(card);
@@ -1586,27 +1505,19 @@ function showDetails(id){
   document.getElementById("detailPage")
     .classList.remove("hidden");
 
-
-  /* PRODUCT IMAGE GALLERY */
-
   const gallery = product.images.map(
 
     (image,index) => `
 
       <img
-
         src="${image}"
-
         alt="${product.name} ছবি ${index+1}"
-
         loading="lazy"
-
         onerror="this.alt='ছবিটি পাওয়া যায়নি'">
 
     `
 
   ).join("");
-
 
   const details = document.getElementById("productDetails");
 
@@ -1747,13 +1658,9 @@ function orderNow(product){
     "?text=" + encodeURIComponent(message);
 
   window.open(
-
     url,
-
     "_blank",
-
     "noopener"
-
   );
 
 }
@@ -1770,18 +1677,11 @@ function orderNow(product){
 
   if(!nav || !news) return;
 
-  /*
-    টিকারের আগের জায়গা ধরে রাখার জন্য
-    একটি spacer তৈরি করা হচ্ছে।
-    এতে স্ক্রল করার সময় পেজ লাফ দেবে না।
-  */
-
   const spacer = document.createElement("div");
 
   spacer.style.display = "none";
 
   news.after(spacer);
-
 
   function updateNewsPosition(){
 
@@ -1791,12 +1691,6 @@ function orderNow(product){
       "--rm-nav-height",
       navHeight + "px"
     );
-
-
-    /*
-      নেভিগেশন বার viewport-এর একদম উপরে
-      চলে এলে টিকার fixed হবে।
-    */
 
     if(nav.getBoundingClientRect().top <= 0){
 
@@ -1812,11 +1706,6 @@ function orderNow(product){
 
     }
 
-    /*
-      পেজের একদম উপরে ফিরে এলে
-      টিকারের আগের জায়গায় ফিরে যাবে।
-    */
-
     else{
 
       news.classList.remove("is-fixed");
@@ -1826,7 +1715,6 @@ function orderNow(product){
     }
 
   }
-
 
   window.addEventListener(
     "scroll",
@@ -1843,7 +1731,6 @@ function orderNow(product){
     "load",
     updateNewsPosition
   );
-
 
   updateNewsPosition();
 

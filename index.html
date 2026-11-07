@@ -105,6 +105,11 @@ nav a.active{
 }
 .hero h2{color:#8c3156;font-size:27px}
 .hero p{line-height:1.9;font-size:16px}
+  <h2>রূপমায়ায় স্বাগতম</h2>
+<p>
+  যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।<br>
+  আপনাদের পছন্দের পোশাক বেছে নিন রূপমায়া থেকে।
+</p>
 
 /* SECTION TITLES */
 .section-title{
@@ -364,11 +369,93 @@ footer strong{
     transition-duration:.01ms!important;
   }
 }
+  /* RUPMAYA 5 SECOND WELCOME NOTIFICATION */
+.rm-welcome-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  padding: 22px 14px;
+  text-align: center;
+  background: linear-gradient(120deg,
+    #f8c5d5, #fff5e8, #f3c5d6, #fff0d2);
+  border-bottom: 4px solid #d6ad60;
+  box-shadow: 0 5px 25px rgba(120,22,63,.22);
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rm-welcome-popup.rm-show {
+  animation: rmWelcomeIn .8s ease forwards;
+}
+
+.rm-welcome-popup.rm-hide {
+  animation: rmWelcomeOut .7s ease forwards;
+}
+
+.rm-welcome-popup h2 {
+  color: #a51e5d;
+  font-size: clamp(24px, 5vw, 38px);
+  margin: 0 0 10px;
+}
+
+.rm-welcome-popup p {
+  color: #78163f;
+  font-size: clamp(14px, 2.5vw, 19px);
+  font-weight: bold;
+  line-height: 1.8;
+  margin: 5px 0;
+}
+
+.rm-welcome-popup .rm-welcome-sub {
+  color: #8c3156;
+  font-size: clamp(13px, 2.2vw, 17px);
+}
+
+@keyframes rmWelcomeIn {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rmWelcomeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+}
+  
 </style>
 </head>
 
 <body>
 
+<!-- RUPMAYA WELCOME NOTIFICATION -->
+<div id="rmWelcomePopup" class="rm-welcome-popup">
+
+  <h2>রূপমায়ায় স্বাগতম</h2>
+
+  <p>
+    যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।
+  </p>
+
+  <p class="rm-welcome-sub">
+    আপনাদের পছন্দের পোশাক বেছে নিন রূপমায়া থেকে।
+  </p>
+
+</div>
+  
 <!-- TOP RUNNING ADVERTISEMENT -->
 <div class="rm-news">
   <div class="rm-news-track">
@@ -994,7 +1081,21 @@ function orderNow(product){
 
   updateNewsPosition();
 })();
+<!-- RUPMAYA WELCOME NOTIFICATION -->
+<div id="rmWelcomePopup" class="rm-welcome-popup">
 
+  <h2>রূপমায়ায় স্বাগতম</h2>
+
+  <p>
+    যেখানে সাজে রূপ, আর পোশাকে ফুটে ওঠে মায়া।
+  </p>
+
+  <p class="rm-welcome-sub">
+    আপনাদের পছন্দের পোশাক বেছে নিন রূপমায়া থেকে।
+  </p>
+
+</div>
+  
 </script>
 
 </body>

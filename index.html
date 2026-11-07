@@ -110,6 +110,16 @@ header{
   width:100%;
   height:auto;
   margin:0 auto;
+  animation:bannerLoop 18s linear infinite;
+}
+
+@keyframes bannerLoop{
+  from{transform:translateX(100%);}
+  to{transform:translateX(-100%);}
+}
+
+header{
+  overflow:hidden;
 }
 
 /* =========================

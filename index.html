@@ -110,7 +110,30 @@ header{
   width:100%;
   height:auto;
   margin:0 auto;
-  animation:bannerLoop 18s linear infinite;
+  animation:bannerAutoSlide 8s ease-in-out infinite;
+}
+
+/* Banner animation */
+@keyframes bannerAutoSlide{
+  0%, 55%{
+    transform:translateX(0);
+  }
+
+  70%{
+    transform:translateX(-110%);
+  }
+
+  71%{
+    transform:translateX(110%);
+  }
+
+  90%, 100%{
+    transform:translateX(0);
+  }
+}
+
+header{
+  overflow:hidden;
 }
 
 @keyframes bannerLoop{

@@ -311,6 +311,146 @@ nav a:hover{color:#bd8b37}
   border:1px solid #d6ad60;
   cursor:pointer;
   margin:4px;
+  /* ===================================
+   PREMIUM PINK + GOLD 3D BUTTONS
+=================================== */
+
+.order,
+.view-btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #d83b83 0%,
+    #a51e5d 45%,
+    #78163f 100%
+  );
+
+  color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  text-align: center;
+
+  border: 1.5px solid #e8c36e;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+
+  box-shadow:
+    0 4px 0 #71304a,
+    0 7px 14px rgba(145, 35, 88, 0.25),
+    inset 0 1px 2px rgba(255,255,255,0.35);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Gold Shine Effect */
+.order::before,
+.view-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 230, 160, 0.55),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  transition: left 0.65s ease;
+}
+
+/* Hover - 3D Lift */
+.order:hover,
+.view-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #ed5a9c 0%,
+    #b52b6c 50%,
+    #851a49 100%
+  );
+
+  border-color: #ffe2a0;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 7px 0 #71304a,
+    0 12px 22px rgba(145, 35, 88, 0.32),
+    0 0 12px rgba(232, 195, 110, 0.35);
+}
+
+/* Shine Animation */
+.order:hover::before,
+.view-btn:hover::before {
+  left: 150%;
+}
+
+/* Button Press */
+.order:active,
+.view-btn:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 1px 0 #71304a,
+    0 3px 7px rgba(145, 35, 88, 0.2);
+}
+
+/* Keyboard Focus */
+.order:focus-visible,
+.view-btn:focus-visible {
+  outline: 3px solid #e8c36e;
+  outline-offset: 3px;
+}
+
+/* Mobile Button */
+@media(max-width:650px) {
+  .order,
+  .view-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 9px;
+  }
+}
+
+/* BACK BUTTON */
+.back-btn {
+  background: linear-gradient(
+    135deg,
+    #d83b83,
+    #78163f
+  );
+
+  color: white;
+  padding: 11px 17px;
+  border: 1.5px solid #e8c36e;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 4px 0 #71304a;
+
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 12px rgba(145,35,88,0.25);
+}
 }
 
 .order:hover,.view-btn:hover{

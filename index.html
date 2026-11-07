@@ -796,6 +796,41 @@ nav {
 nav a {
   color: #FFF8F3 !important;
 }
+  nav a {
+    color: #FFF8F3 !important;
+}
+
+/* নতুন CSS এখান থেকে বসাবে */
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 15px;
+}
+
+.offer-price {
+    color: #c2185b;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.discount {
+    display: inline-block;
+    background: #c2185b;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.saving {
+    color: #80652b;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+</style>
 </style>
 </head>
 
@@ -937,33 +972,42 @@ nav a {
 
       <h3>থ্রি-পিস কালেকশন</h3>
 
-    </div>
-
-    <div
-    class="category-card"
+    
     onclick="showCategory('saree')">
+<!-- ২ নম্বর শাড়ি -->
+<div class="category-card"
+     onclick="showCategory('saree')">
 
-    <img
-        src="./Images/02-saree.jpeg"
-        alt="শাড়ি কালেকশন"
-        loading="lazy">
+    <img src="./Images/02-saree.jpeg"
+         alt="শাড়ি কালেকশন"
+         loading="lazy">
 
     <h3>শাড়ি কালেকশন</h3>
 
+    <p class="old-price">৳ ২,১০০</p>
+    <p class="offer-price">৳ ১,৮০০</p>
+    <span class="discount">15% OFF</span>
+    <p class="saving">আপনার সাশ্রয় ৳ ৩০০</p>
+
 </div>
 
-<div
-    class="category-card"
-    onclick="showCategory('saree')">
+<!-- ৩ নম্বর শাড়ি -->
+<div class="category-card"
+     onclick="showCategory('saree')">
 
-    <img
-        src="./Images/03-saree.jpeg"
-        alt="শাড়ি কালেকশন"
-        loading="lazy">
+    <img src="./Images/03-saree.jpeg"
+         alt="শাড়ি কালেকশন"
+         loading="lazy">
 
     <h3>শাড়ি কালেকশন</h3>
 
+    <p class="old-price">৳ ২,১০০</p>
+    <p class="offer-price">৳ ১,৮০০</p>
+    <span class="discount">15% OFF</span>
+    <p class="saving">আপনার সাশ্রয় ৳ ৩০০</p>
+
 </div>
+   
 
     </div>
 
